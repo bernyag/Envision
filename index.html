@@ -1,13 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-es-lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Envision – Digital Agency</title>
-<meta name="description" content="Premium web development, mobile apps & SaaS products for ambitious brands in the US & México.">
+<title data-es="Envision | Agencia de Desarrollo de Apps y SaaS – Ciudad de México y Nueva York">Envision | App &amp; SaaS Development Agency – NYC &amp; Mexico City</title>
+<meta name="description" content="Senior design and engineering team with a presence in New York and Mexico City, building web apps, mobile apps, SaaS and AI products for companies anywhere. In your time zone, in English or Spanish." data-es-content="Equipo senior de diseño e ingeniería con presencia en Nueva York y Ciudad de México que construye apps web, apps móviles, SaaS y productos con IA para empresas en cualquier parte del mundo.">
+<meta name="theme-color" content="#0A0A0F">
+<link rel="canonical" href="https://envision-one-alpha.vercel.app/" data-es-href="https://envision-one-alpha.vercel.app/es/">
+<link rel="alternate" hreflang="en" href="https://envision-one-alpha.vercel.app/">
+<link rel="alternate" hreflang="es" href="https://envision-one-alpha.vercel.app/es/">
+<link rel="alternate" hreflang="x-default" href="https://envision-one-alpha.vercel.app/">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%237C3AED'/%3E%3Cstop offset='1' stop-color='%233B82F6'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23g)'/%3E%3Ctext x='32' y='45' font-family='Arial,sans-serif' font-size='38' font-weight='900' fill='white' text-anchor='middle'%3EE%3C/text%3E%3C/svg%3E">
+
+<!-- Open Graph / social previews (WhatsApp, LinkedIn, X, iMessage) -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Envision">
+<meta property="og:url" content="https://envision-one-alpha.vercel.app/" data-es-content="https://envision-one-alpha.vercel.app/es/">
+<meta property="og:title" content="Envision – Senior product team, nearshore rates" data-es-content="Envision – Productos digitales de calidad internacional, hechos en México">
+<meta property="og:description" content="Web apps, mobile apps, SaaS and AI products for companies anywhere. Based in New York and Mexico City, working in your time zone, in English or Spanish." data-es-content="Apps web, apps móviles, SaaS y productos con IA para empresas en cualquier parte del mundo. Con presencia en Ciudad de México y Nueva York.">
+<meta property="og:image" content="https://envision-one-alpha.vercel.app/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_US" data-es-content="es_MX">
+<meta property="og:locale:alternate" content="es_MX" data-es-content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Envision",
+  "legalName": "Envision XC, S.A. de C.V.",
+  "url": "https://envision-one-alpha.vercel.app/",
+  "logo": "https://envision-one-alpha.vercel.app/assets/envision-logo.png",
+  "image": "https://envision-one-alpha.vercel.app/assets/og-image.jpg",
+  "description": "Design and engineering agency building web apps, mobile apps, SaaS and AI products for companies worldwide, with a presence in New York and Mexico City.",
+  "email": "info@matchball.io",
+  "telephone": "+1-929-640-4388",
+  "foundingDate": "2020",
+  "address": [
+    { "@type": "PostalAddress", "addressLocality": "New York", "addressRegion": "NY", "addressCountry": "US" },
+    { "@type": "PostalAddress", "addressLocality": "Mexico City", "addressCountry": "MX" }
+  ],
+  "areaServed": "Worldwide",
+  "availableLanguage": ["English", "Spanish"],
+  "knowsAbout": ["Web development", "Mobile app development", "SaaS development", "AI integration", "E-commerce"]
+}
+</script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 /* ── VARIABLES ─────────────────────────────────────────────────────────── */
 :root {
@@ -34,6 +77,7 @@
   --radius:    14px;
   --radius-sm: 8px;
   --font:      'Inter', sans-serif;
+  --font-display: 'Bricolage Grotesque', 'Inter', sans-serif;
 }
 
 /* ── RESET ─────────────────────────────────────────────────────────────── */
@@ -65,6 +109,12 @@ body::before {
   opacity: 0.025;
   pointer-events: none;
   z-index: 9999;
+}
+
+/* Headlines use Bricolage Grotesque; body copy stays in Inter */
+.hero-title, .section-title, .stat-num, .case-title, .project-name,
+.service-title, .step-title, .team-name, .project-shot.placeholder span {
+  font-family: var(--font-display);
 }
 
 /* ── UTILITIES ──────────────────────────────────────────────────────────── */
@@ -256,7 +306,7 @@ nav.scrolled {
 }
 .hero-title {
   font-size: clamp(2.6rem, 6vw, 4.5rem);
-  font-weight: 900; line-height: 1.1;
+  font-weight: 800; line-height: 1.05;
   letter-spacing: -0.03em;
   margin-bottom: 24px;
 }
@@ -319,7 +369,7 @@ nav.scrolled {
   padding: 28px 32px; text-align: center;
 }
 .stat-num {
-  font-size: 2.25rem; font-weight: 900;
+  font-size: 2.25rem; font-weight: 800;
   letter-spacing: -0.03em; line-height: 1;
   background: linear-gradient(135deg, var(--grad1), var(--grad2));
   -webkit-background-clip: text; -webkit-text-fill-color: transparent;
@@ -677,9 +727,261 @@ footer {
   .process-grid { grid-template-columns: 1fr; }
   .stats-grid { grid-template-columns: 1fr; }
 }
+
+/* ── ICONS ──────────────────────────────────────────────────────────────── */
+.ico { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 1.75; stroke-linecap: round; stroke-linejoin: round; }
+.service-icon { color: #a78bfa; }
+.contact-icon { color: #a78bfa; }
+.contact-icon .ico { width: 18px; height: 18px; }
+
+/* ── HERO ADDITIONS ─────────────────────────────────────────────────────── */
+.hero-checks {
+  display: flex; flex-wrap: wrap; gap: 10px 24px;
+  margin-top: 28px; font-size: 0.85rem; color: var(--dim);
+}
+.hero-checks span { display: inline-flex; align-items: center; gap: 8px; }
+.hero-checks .ico { width: 16px; height: 16px; color: var(--green); stroke-width: 2.5; }
+
+/* ── CLIENT STRIP ───────────────────────────────────────────────────────── */
+#clients { padding: 40px 0 8px; background: var(--bg); }
+.clients-label {
+  text-align: center; font-size: 0.72rem; font-weight: 600;
+  letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted);
+  margin-bottom: 22px;
+}
+/* Infinite logo carousel: the row is rendered twice and the track slides by exactly one copy */
+.clients-marquee {
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
+}
+.clients-track { display: flex; width: max-content; animation: marquee 38s linear infinite; }
+.clients-marquee:hover .clients-track { animation-play-state: paused; }
+.clients-row {
+  display: flex; align-items: center; flex-shrink: 0;
+  gap: 64px; padding-right: 64px;
+}
+@keyframes marquee { to { transform: translateX(-50%); } }
+@media (prefers-reduced-motion: reduce) {
+  .clients-marquee { -webkit-mask-image: none; mask-image: none; }
+  .clients-track { animation: none; width: auto; justify-content: center; }
+  .clients-row { flex-wrap: wrap; justify-content: center; gap: 14px 44px; padding-right: 0; }
+  .clients-row[aria-hidden] { display: none; }
+}
+.client-mark {
+  font-size: 1.15rem; font-weight: 800; letter-spacing: -0.02em;
+  color: #8A8AA8; opacity: 0.85; transition: color 0.2s, opacity 0.2s;
+  white-space: nowrap;
+}
+.client-mark:hover { color: var(--white); opacity: 1; }
+.client-mark.serif { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; letter-spacing: -0.01em; font-size: 1.35rem; }
+.client-mark.caps { text-transform: uppercase; letter-spacing: 0.32em; font-weight: 400; font-size: 1rem; }
+/* Logo images are shown in one neutral tone so mismatched brand colors read as a set */
+.client-mark img { display: block; width: auto; filter: brightness(0) invert(1); }
+.client-mark.logo { opacity: 0.6; }
+.client-mark.logo:hover { opacity: 1; }
+
+/* ── SERVICES: featured AI card ─────────────────────────────────────────── */
+.service-card.featured { grid-column: 1 / -1; background: linear-gradient(135deg, rgba(124,58,237,0.12), rgba(59,130,246,0.06)), var(--card); border-color: rgba(124,58,237,0.3); }
+.service-card.featured::before { opacity: 1; }
+.service-badge {
+  position: absolute; top: 24px; right: 24px;
+  font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+  color: #a78bfa; background: rgba(124,58,237,0.15); border: 1px solid rgba(124,58,237,0.35);
+  padding: 4px 10px; border-radius: 100px;
+}
+.service-proof { margin-top: 14px; font-size: 0.82rem; color: var(--dim); }
+.service-proof strong { color: var(--white); }
+
+/* ── PORTFOLIO: screenshots + results ───────────────────────────────────── */
+.project-shot {
+  aspect-ratio: 16 / 10;
+  background-color: var(--card2);
+  background-size: cover; background-position: top center;
+  border-bottom: 1px solid var(--border);
+  position: relative;
+}
+.project-shot.placeholder {
+  display: flex; align-items: center; justify-content: center;
+  background: radial-gradient(circle at 30% 20%, color-mix(in srgb, var(--accent-text) 35%, transparent), transparent 60%), var(--card2);
+}
+.project-shot.placeholder span {
+  font-size: 2.2rem; font-weight: 800; letter-spacing: -0.03em;
+  color: var(--accent-text); opacity: 0.9;
+}
+.project-pill {
+  position: absolute; top: 12px; left: 12px;
+  font-size: 0.65rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+  background: rgba(10,10,15,0.8); backdrop-filter: blur(8px);
+  border: 1px solid var(--border2); color: var(--white);
+  padding: 4px 10px; border-radius: 100px;
+}
+.project-result {
+  display: flex; align-items: center; gap: 8px;
+  font-size: 0.8rem; font-weight: 600; color: var(--white);
+  background: var(--card2); border: 1px solid var(--border);
+  border-radius: 6px; padding: 8px 12px; margin-bottom: 18px;
+}
+.project-result .ico { width: 15px; height: 15px; color: var(--accent-text); stroke-width: 2.25; flex-shrink: 0; }
+
+/* ── CASE STUDIES ───────────────────────────────────────────────────────── */
+#case-studies { background: var(--bg2); }
+.cases { display: flex; flex-direction: column; gap: 24px; margin-top: 52px; }
+.case-card {
+  display: grid; grid-template-columns: 1fr 1.25fr;
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: var(--radius); overflow: hidden;
+}
+.case-shot { background-size: cover; background-position: top center; min-height: 320px; background-color: var(--card2); }
+.case-body { padding: 36px; display: flex; flex-direction: column; gap: 18px; }
+.case-cat { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent-text); }
+.case-title { font-size: 1.5rem; font-weight: 800; letter-spacing: -0.02em; line-height: 1.2; }
+.case-rows { display: grid; gap: 12px; }
+.case-row { display: grid; grid-template-columns: 110px 1fr; gap: 12px; font-size: 0.88rem; line-height: 1.6; }
+.case-row dt { color: var(--muted); font-weight: 600; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; padding-top: 2px; }
+.case-row dd { color: var(--dim); }
+.case-row.result dd { color: var(--white); font-weight: 600; }
+.case-quote {
+  border-left: 2px solid var(--accent-text);
+  padding: 4px 0 4px 18px; margin-top: 4px;
+}
+.case-quote p { font-size: 0.92rem; color: var(--dim); font-style: italic; line-height: 1.7; margin-bottom: 14px; }
+.case-author { display: flex; align-items: center; gap: 12px; }
+.author-avatar.initials {
+  width: 40px; height: 40px; font-size: 0.8rem; font-weight: 800; color: #fff;
+  background: linear-gradient(135deg, var(--grad1), var(--grad2)); border: none;
+}
+.case-link { display: inline-flex; align-items: center; gap: 6px; font-size: 0.82rem; font-weight: 600; color: var(--accent-text); margin-top: auto; }
+.case-link:hover { gap: 10px; }
+
+/* ── FAQ ────────────────────────────────────────────────────────────────── */
+#faq { background: var(--bg); }
+.faq-list { max-width: 820px; margin: 48px auto 0; display: flex; flex-direction: column; gap: 12px; }
+.faq-item {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: var(--radius-sm); transition: border-color 0.2s;
+}
+.faq-item[open] { border-color: var(--border2); }
+.faq-item summary {
+  list-style: none; cursor: pointer;
+  padding: 20px 56px 20px 24px; position: relative;
+  font-size: 0.98rem; font-weight: 700;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after {
+  content: '+'; position: absolute; right: 24px; top: 50%; transform: translateY(-50%);
+  font-size: 1.3rem; font-weight: 400; color: var(--muted); transition: transform 0.2s;
+}
+.faq-item[open] summary::after { transform: translateY(-50%) rotate(45deg); }
+.faq-item p { padding: 0 24px 22px; font-size: 0.9rem; color: var(--muted); line-height: 1.75; }
+
+/* ── GUARANTEES ─────────────────────────────────────────────────────────── */
+.guarantees {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
+  max-width: 900px; margin: 0 auto 32px;
+}
+.guarantee {
+  display: flex; gap: 14px; align-items: flex-start;
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: var(--radius-sm); padding: 18px;
+}
+.guarantee .ico { color: var(--green); flex-shrink: 0; margin-top: 2px; }
+.guarantee strong { display: block; font-size: 0.9rem; margin-bottom: 4px; }
+.guarantee span { font-size: 0.8rem; color: var(--muted); line-height: 1.55; }
+.calendly-shell { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; max-width: 900px; margin: 0 auto; }
+.calendly-fallback { padding: 48px 24px; text-align: center; color: var(--muted); font-size: 0.9rem; }
+.calendly-fallback a { color: #a78bfa; font-weight: 600; }
+
+/* ── FORM ADDITIONS ─────────────────────────────────────────────────────── */
+select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%236B6B8F' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat; background-position: right 14px center;
+  padding-right: 36px;
+}
+.form-note { margin-top: 12px; font-size: 0.78rem; color: var(--muted); text-align: center; }
+.form-error {
+  display: none; margin-top: 14px; padding: 12px 16px;
+  background: rgba(236,72,153,0.1); border: 1px solid rgba(236,72,153,0.35);
+  border-radius: var(--radius-sm); font-size: 0.85rem; color: var(--dim);
+}
+.form-error a { color: var(--white); text-decoration: underline; }
+.form-success .check { color: var(--green); display: flex; justify-content: center; }
+.form-success .check .ico { width: 44px; height: 44px; stroke-width: 2; }
+
+/* ── FLOATING CTAs ──────────────────────────────────────────────────────── */
+.wa-float {
+  position: fixed; right: 24px; bottom: 24px; z-index: 900;
+  width: 56px; height: 56px; border-radius: 50%;
+  background: #25D366; color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+  transition: transform 0.2s, opacity 0.3s;
+}
+.wa-float:hover { transform: scale(1.06); }
+/* keep the footer icons clear of the floating button */
+@media (min-width: 769px) { .footer-bottom { padding-right: 72px; } }
+.sticky-cta {
+  display: none;
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 900;
+  padding: 12px 16px calc(12px + env(safe-area-inset-bottom));
+  background: rgba(10,10,15,0.94); backdrop-filter: blur(16px);
+  border-top: 1px solid var(--border2);
+  gap: 10px;
+  transform: translateY(110%); transition: transform 0.3s;
+}
+.sticky-cta.show { transform: none; }
+.sticky-cta .btn-primary { flex: 1; text-align: center; padding: 13px 16px; font-size: 0.92rem; }
+.sticky-cta .sticky-wa {
+  width: 48px; flex-shrink: 0; border-radius: 8px; background: #25D366; color: #fff;
+  display: flex; align-items: center; justify-content: center;
+}
+.lang-btn { display: inline-flex; align-items: center; }
+
+@media (max-width: 1024px) {
+  .nav-links { gap: 24px; }
+  .case-card { grid-template-columns: 1fr; }
+  .case-shot { min-height: 0; aspect-ratio: 16 / 9; }
+}
+@media (max-width: 768px) {
+  .guarantees { grid-template-columns: 1fr; }
+  .case-body { padding: 24px; }
+  .case-row { grid-template-columns: 1fr; gap: 2px; }
+  .wa-float { display: none; }
+  .sticky-cta { display: flex; }
+  footer { padding-bottom: 96px; }
+  .service-badge { position: static; display: inline-block; margin-bottom: 14px; }
+  .clients-row { gap: 44px; padding-right: 44px; }
+  .clients-track { animation-duration: 28s; }
+  .client-mark { font-size: 1rem; }
+  .client-mark img { transform: scale(0.85); }
+}
+@media (max-width: 900px) and (min-width: 769px) {
+  .nav-links { gap: 18px; }
+  .nav-links a { font-size: 0.8rem; }
+}
 </style>
 </head>
 <body>
+
+<!-- Icon sprite (Lucide-style line icons) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></symbol>
+  <symbol id="i-phone-app" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></symbol>
+  <symbol id="i-dashboard" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="9" rx="1"/><rect x="14" y="3" width="7" height="5" rx="1"/><rect x="14" y="12" width="7" height="9" rx="1"/><rect x="3" y="16" width="7" height="5" rx="1"/></symbol>
+  <symbol id="i-cart" viewBox="0 0 24 24"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></symbol>
+  <symbol id="i-sparkles" viewBox="0 0 24 24"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/><path d="M20 3v4"/><path d="M22 5h-4"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+  <symbol id="i-check-circle" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></symbol>
+  <symbol id="i-trend" viewBox="0 0 24 24"><path d="M22 7 13.5 15.5 8.5 10.5 2 17"/><path d="M16 7h6v6"/></symbol>
+  <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4"/><path d="M8 2v4"/><path d="M3 10h18"/></symbol>
+  <symbol id="i-file" viewBox="0 0 24 24"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 13h4"/><path d="M10 17h4"/></symbol>
+  <symbol id="i-code" viewBox="0 0 24 24"><path d="m16 18 6-6-6-6"/><path d="m8 6-6 6 6 6"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></symbol>
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></symbol>
+</svg>
 
 <!-- ═══════════════════════════════════════════════════════ NAV -->
 <nav id="navbar">
@@ -688,18 +990,18 @@ footer {
       <img src="assets/envision-logo.png" alt="Envision" class="logo-img" width="433" height="66">
     </a>
     <ul class="nav-links">
-      <li><a href="#services" data-en="Services" data-es="Servicios">Services</a></li>
-      <li><a href="#portfolio" data-en="Work" data-es="Trabajo">Work</a></li>
-      <li><a href="#process" data-en="Process" data-es="Proceso">Process</a></li>
-      <li><a href="#testimonials" data-en="Clients" data-es="Clientes">Clients</a></li>
-      <li><a href="#team" data-en="Team" data-es="Equipo">Team</a></li>
-      <li><a href="#book" data-en="Book a Call" data-es="Agendar">Book a Call</a></li>
+      <li><a href="#services" data-es="Servicios">Services</a></li>
+      <li><a href="#portfolio" data-es="Trabajo">Work</a></li>
+      <li><a href="#case-studies" data-es="Casos de Éxito">Case Studies</a></li>
+      <li><a href="#process" data-es="Proceso">Process</a></li>
+      <li><a href="#team" data-es="Equipo">Team</a></li>
+      <li><a href="#faq" data-es="Preguntas">FAQ</a></li>
     </ul>
     <div class="nav-right">
-      <button class="lang-btn" id="langToggle" onclick="toggleLang()">ES</button>
-      <a href="#contact" class="btn-primary" data-en="Get a Quote" data-es="Cotizar">Get a Quote</a>
+      <a href="es/" class="lang-btn" hreflang="es" lang="es" data-es-href="../" data-es-hreflang="en" data-es-lang="en" data-es="EN" aria-label="Ver en español" data-es-aria-label="View in English">ES</a>
+      <a href="#book" class="btn-primary" data-track="cta_book" data-es="Agenda una Llamada">Book a Free Call</a>
     </div>
-    <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+    <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu" aria-expanded="false" aria-controls="mobileMenu">
       <span></span><span></span><span></span>
     </button>
   </div>
@@ -707,13 +1009,14 @@ footer {
 
 <!-- Mobile menu -->
 <div class="mobile-menu" id="mobileMenu">
-  <a href="#services" onclick="closeMenu()" data-en="Services" data-es="Servicios">Services</a>
-  <a href="#portfolio" onclick="closeMenu()" data-en="Work" data-es="Trabajo">Work</a>
-  <a href="#process" onclick="closeMenu()" data-en="Process" data-es="Proceso">Process</a>
-  <a href="#testimonials" onclick="closeMenu()" data-en="Clients" data-es="Clientes">Clients</a>
-  <a href="#team" onclick="closeMenu()" data-en="Team" data-es="Equipo">Team</a>
-  <a href="#book" onclick="closeMenu()" data-en="Book a Call" data-es="Agendar">Book a Call</a>
-  <a href="#contact" class="btn-primary" onclick="closeMenu()" data-en="Get a Quote" data-es="Cotizar">Get a Quote</a>
+  <a href="#services" onclick="closeMenu()" data-es="Servicios">Services</a>
+  <a href="#portfolio" onclick="closeMenu()" data-es="Trabajo">Work</a>
+  <a href="#case-studies" onclick="closeMenu()" data-es="Casos de Éxito">Case Studies</a>
+  <a href="#process" onclick="closeMenu()" data-es="Proceso">Process</a>
+  <a href="#team" onclick="closeMenu()" data-es="Equipo">Team</a>
+  <a href="#faq" onclick="closeMenu()" data-es="Preguntas Frecuentes">FAQ</a>
+  <a href="es/" hreflang="es" data-es-href="../" data-es-hreflang="en" data-es="English version">Versión en español</a>
+  <a href="#book" class="btn-primary" onclick="closeMenu()" data-track="cta_book" data-es="Agenda una Llamada Gratis">Book a Free Call</a>
 </div>
 
 <!-- ═══════════════════════════════════════════════════════ HERO -->
@@ -725,27 +1028,63 @@ footer {
     <div class="hero-content">
       <div class="hero-badge">
         <span class="hero-badge-dot"></span>
-        <span data-en="Digital Agency · New York City / Mexico City · Est. 2020" data-es="Agencia Digital · Nueva York / Ciudad de México · Est. 2020">Digital Agency · New York City / Mexico City · Est. 2020</span>
+        <span data-es="Estudio de Producto · CDMX y Nueva York · Trabajamos en Todo el Mundo">Product Studio · New York &amp; Mexico City · Working Worldwide</span>
       </div>
       <h1 class="hero-title">
-        <span data-en="We Build Digital" data-es="Construimos Productos">We Build Digital</span>
-        <span class="accent grad-text" data-en="Products That Drive Growth." data-es="Digitales Que Impulsan Tu Negocio.">Products That Drive Growth.</span>
+        <span data-es="Productos Digitales de Calidad Internacional.">A Senior Product Team.</span>
+        <span class="accent grad-text" data-es="Hechos en México.">At Nearshore Rates.</span>
       </h1>
-      <p class="hero-sub" data-en="From landing pages to full-scale SaaS platforms we craft premium digital experiences for ambitious brands across the US &amp; México." data-es="Desde landing pages hasta plataformas SaaS creamos experiencias digitales premium para marcas ambiciosas en EE.UU. y México.">From landing pages to full-scale SaaS platforms we craft premium digital experiences for ambitious brands across the US &amp; México.</p>
+      <p class="hero-sub" data-es="Diseñamos y construimos apps web, apps móviles, plataformas SaaS y productos con IA para empresas en cualquier parte del mundo — del MVP al lanzamiento en tan solo 12 semanas, con presencia en Ciudad de México y Nueva York.">We design and build web apps, mobile apps, SaaS platforms and AI products for companies anywhere — from MVP to launch in as little as 12 weeks. Based in New York and Mexico City, working in your time zone, in English or Spanish.</p>
       <div class="hero-ctas">
-        <a href="#portfolio" class="btn-hero">
-          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M15 10l-4 4 4 4"/><path d="M21 12H3"/></svg>
-          <span data-en="View Our Work" data-es="Ver Nuestro Trabajo">View Our Work</span>
+        <a href="#book" class="btn-hero" data-track="cta_book">
+          <svg class="ico" style="width:16px;height:16px"><use href="#i-calendar"/></svg>
+          <span data-es="Agenda una Llamada Gratis de 30 min">Book a Free 30-min Call</span>
         </a>
-        <a href="#contact" class="btn-outline">
-          <span data-en="Get a Free Quote" data-es="Solicitar Cotización">Get a Free Quote</span>
-          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+        <a href="#portfolio" class="btn-outline">
+          <span data-es="Ver Nuestro Trabajo">See Our Work</span>
+          <svg class="ico" style="width:14px;height:14px"><use href="#i-arrow"/></svg>
         </a>
+      </div>
+      <div class="hero-checks">
+        <span><svg class="ico"><use href="#i-check"/></svg><span data-es="En tu zona horaria">Works in your time zone</span></span>
+        <span><svg class="ico"><use href="#i-check"/></svg><span data-es="Español e inglés">English &amp; Spanish</span></span>
+        <span><svg class="ico"><use href="#i-check"/></svg><span data-es="El código es 100% tuyo">You own 100% of the code</span></span>
       </div>
     </div>
   </div>
   <div class="hero-scroll">
     <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 5v14"/><path d="M19 12l-7 7-7-7"/></svg>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════ CLIENTS -->
+<section id="clients" aria-label="Clients">
+  <div class="container">
+    <p class="clients-label" data-es="Productos que hemos ayudado a lanzar">Products we've helped launch</p>
+    <div class="clients-marquee">
+      <div class="clients-track">
+        <div class="clients-row">
+          <a href="#portfolio" class="client-mark logo"><img src="assets/logos/sublitool.svg" alt="Sublitool" height="30" style="height:30px"></a>
+          <a href="#portfolio" class="client-mark logo"><img src="assets/logos/unna.png" alt="Unna" height="26" style="height:26px"></a>
+          <a href="#case-studies" class="client-mark caps">OnSpot</a>
+          <a href="#case-studies" class="client-mark logo"><img src="assets/logos/matchball.svg" alt="Matchball" height="15" style="height:15px"></a>
+          <a href="#portfolio" class="client-mark serif">tend</a>
+          <a href="#case-studies" class="client-mark logo"><img src="assets/logos/arqax.png" alt="Arqax" height="20" style="height:20px"></a>
+          <a href="#case-studies" class="client-mark logo"><img src="assets/logos/iago.svg" alt="Iago Design" height="40" style="height:40px"></a>
+          <a href="#portfolio" class="client-mark">e*stars</a>
+        </div>
+        <div class="clients-row" aria-hidden="true">
+          <a tabindex="-1" href="#portfolio" class="client-mark logo"><img src="assets/logos/sublitool.svg" alt="" height="30" style="height:30px"></a>
+          <a tabindex="-1" href="#portfolio" class="client-mark logo"><img src="assets/logos/unna.png" alt="" height="26" style="height:26px"></a>
+          <a tabindex="-1" href="#case-studies" class="client-mark caps">OnSpot</a>
+          <a tabindex="-1" href="#case-studies" class="client-mark logo"><img src="assets/logos/matchball.svg" alt="" height="15" style="height:15px"></a>
+          <a tabindex="-1" href="#portfolio" class="client-mark serif">tend</a>
+          <a tabindex="-1" href="#case-studies" class="client-mark logo"><img src="assets/logos/arqax.png" alt="" height="20" style="height:20px"></a>
+          <a tabindex="-1" href="#case-studies" class="client-mark logo"><img src="assets/logos/iago.svg" alt="" height="40" style="height:40px"></a>
+          <a tabindex="-1" href="#portfolio" class="client-mark">e*stars</a>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -755,19 +1094,19 @@ footer {
     <div class="stats-grid">
       <div class="stat-item fade-up">
         <div class="stat-num">15+</div>
-        <div class="stat-label" data-en="Projects Delivered" data-es="Proyectos Entregados">Projects Delivered</div>
+        <div class="stat-label" data-es="Productos Lanzados">Products Shipped</div>
       </div>
       <div class="stat-item fade-up">
-        <div class="stat-num">10+</div>
-        <div class="stat-label" data-en="Years of Experience" data-es="Años de Experiencia">Years of Experience</div>
+        <div class="stat-num">2020</div>
+        <div class="stat-label" data-es="Construyendo Productos Desde">Building Products Since</div>
+      </div>
+      <div class="stat-item fade-up">
+        <div class="stat-num">EN · ES</div>
+        <div class="stat-label" data-es="Equipo Bilingüe">Fully Bilingual Team</div>
       </div>
       <div class="stat-item fade-up">
         <div class="stat-num">100%</div>
-        <div class="stat-label" data-en="Client Satisfaction" data-es="Satisfacción del Cliente">Client Satisfaction</div>
-      </div>
-      <div class="stat-item fade-up">
-        <div class="stat-num">US+MX</div>
-        <div class="stat-label" data-en="Markets Served" data-es="Mercados Atendidos">Markets Served</div>
+        <div class="stat-label" data-es="Del Código es Tuyo">Code Ownership, Yours</div>
       </div>
     </div>
   </div>
@@ -777,15 +1116,28 @@ footer {
 <section id="services" class="section">
   <div class="container">
     <div class="services-header fade-up">
-      <p class="section-label" data-en="What We Do" data-es="Lo Que Hacemos">What We Do</p>
-      <h2 class="section-title" data-en="Services Built for <span class='grad-text'>Ambitious Brands</span>" data-es="Servicios Diseñados para <span class='grad-text'>Marcas Ambiciosas</span>">Services Built for <span class="grad-text">Ambitious Brands</span></h2>
-      <p class="section-sub" data-en="We combine design excellence with engineering precision to build products people love to use." data-es="Combinamos excelencia en diseño con precisión en ingeniería para construir productos que la gente ama usar.">We combine design excellence with engineering precision to build products people love to use.</p>
+      <p class="section-label" data-es="Lo Que Hacemos">What We Do</p>
+      <h2 class="section-title" data-es="Servicios Diseñados para <span class='grad-text'>Marcas Ambiciosas</span>">Services Built for <span class="grad-text">Ambitious Brands</span></h2>
+      <p class="section-sub" data-es="Combinamos excelencia en diseño con precisión en ingeniería para construir productos que la gente ama usar.">We combine design excellence with engineering precision to build products people love to use.</p>
     </div>
     <div class="services-grid">
+      <div class="service-card featured fade-up" style="--accent: linear-gradient(90deg,#7C3AED,#3B82F6,#2DD4BF)">
+        <span class="service-badge" data-es="Alta demanda">In demand</span>
+        <div class="service-icon"><svg class="ico"><use href="#i-sparkles"/></svg></div>
+        <div class="service-title" data-es="IA e Integraciones Inteligentes">AI Features &amp; Integrations</div>
+        <div class="service-desc" data-es="IA que realmente aporta valor — asistentes conversacionales, extracción de datos y documentos, generación de contenido y automatización de procesos, integrados en tu producto o tus herramientas internas.">AI that earns its keep — chat assistants, document and data extraction, content generation and workflow automation, built into your product or your internal tools.</div>
+        <div class="service-proof" data-es="Ya en producción: <strong>Sublitool</strong> genera plantillas con IA y <strong>Tend</strong> usa IA para guiar a sus usuarios.">Already in production: <strong>Sublitool</strong> generates print templates with AI and <strong>Tend</strong> uses AI to guide its users.</div>
+        <div class="service-tags">
+          <span class="service-tag" data-es="Integración de LLMs">LLM Integration</span>
+          <span class="service-tag" data-es="Agentes de IA">AI Agents</span>
+          <span class="service-tag" data-es="Búsqueda y RAG">RAG &amp; Search</span>
+          <span class="service-tag" data-es="Automatización">Automation</span>
+        </div>
+      </div>
       <div class="service-card fade-up" style="--accent: linear-gradient(90deg,#7C3AED,#3B82F6)">
-        <div class="service-icon">🌐</div>
-        <div class="service-title" data-en="Web Design &amp; Development" data-es="Diseño y Desarrollo Web">Web Design &amp; Development</div>
-        <div class="service-desc" data-en="Custom websites and landing pages crafted for performance, SEO, and conversion. From brochure sites to complex portals." data-es="Sitios web y landing pages diseñados para rendimiento, SEO y conversión. Desde sitios corporativos hasta portales complejos.">Custom websites and landing pages crafted for performance, SEO, and conversion. From brochure sites to complex portals.</div>
+        <div class="service-icon"><svg class="ico"><use href="#i-globe"/></svg></div>
+        <div class="service-title" data-es="Diseño y Desarrollo Web">Web Design &amp; Development</div>
+        <div class="service-desc" data-es="Sitios web y landing pages diseñados para rendimiento, SEO y conversión. Desde sitios corporativos hasta portales complejos.">Custom websites and landing pages crafted for performance, SEO, and conversion. From brochure sites to complex portals.</div>
         <div class="service-tags">
           <span class="service-tag">Next.js</span>
           <span class="service-tag">React</span>
@@ -794,9 +1146,9 @@ footer {
         </div>
       </div>
       <div class="service-card fade-up" style="--accent: linear-gradient(90deg,#F59E0B,#F97316)">
-        <div class="service-icon">📱</div>
-        <div class="service-title" data-en="Mobile Applications" data-es="Aplicaciones Móviles">Mobile Applications</div>
-        <div class="service-desc" data-en="Native and cross-platform iOS &amp; Android apps built for performance, scalability, and exceptional user experience." data-es="Apps iOS y Android nativas y multiplataforma, construidas para rendimiento, escalabilidad y experiencia de usuario excepcional.">Native and cross-platform iOS &amp; Android apps built for performance, scalability, and exceptional user experience.</div>
+        <div class="service-icon"><svg class="ico"><use href="#i-phone-app"/></svg></div>
+        <div class="service-title" data-es="Aplicaciones Móviles">Mobile Applications</div>
+        <div class="service-desc" data-es="Apps iOS y Android nativas y multiplataforma, construidas para rendimiento, escalabilidad y experiencia de usuario excepcional.">Native and cross-platform iOS &amp; Android apps built for performance, scalability, and exceptional user experience.</div>
         <div class="service-tags">
           <span class="service-tag">React Native</span>
           <span class="service-tag">Swift</span>
@@ -805,9 +1157,9 @@ footer {
         </div>
       </div>
       <div class="service-card fade-up" style="--accent: linear-gradient(90deg,#A855F7,#7C3AED)">
-        <div class="service-icon">⚙️</div>
-        <div class="service-title" data-en="SaaS &amp; Web Applications" data-es="SaaS y Aplicaciones Web">SaaS &amp; Web Applications</div>
-        <div class="service-desc" data-en="Complex web applications and platforms engineered from the ground up dashboards, CRMs, marketplaces, and custom tools." data-es="Aplicaciones web complejas y plataformas construidas desde cero dashboards, CRMs, marketplaces y herramientas a medida.">Complex web applications and platforms engineered from the ground up dashboards, CRMs, marketplaces, and custom tools.</div>
+        <div class="service-icon"><svg class="ico"><use href="#i-dashboard"/></svg></div>
+        <div class="service-title" data-es="SaaS y Aplicaciones Web">SaaS &amp; Web Applications</div>
+        <div class="service-desc" data-es="Aplicaciones web complejas y plataformas construidas desde cero — dashboards, CRMs, marketplaces y herramientas a medida.">Complex web applications and platforms engineered from the ground up — dashboards, CRMs, marketplaces, and custom tools.</div>
         <div class="service-tags">
           <span class="service-tag">Node.js</span>
           <span class="service-tag">PostgreSQL</span>
@@ -816,14 +1168,14 @@ footer {
         </div>
       </div>
       <div class="service-card fade-up" style="--accent: linear-gradient(90deg,#22C55E,#2DD4BF)">
-        <div class="service-icon">🛒</div>
-        <div class="service-title" data-en="E-Commerce" data-es="Comercio Electrónico">E-Commerce</div>
-        <div class="service-desc" data-en="Online stores that maximize revenue with seamless shopping experiences, payment integrations, and smart inventory management." data-es="Tiendas en línea que maximizan ingresos con experiencias de compra fluidas, integraciones de pago y gestión de inventario.">Online stores that maximize revenue with seamless shopping experiences, payment integrations, and smart inventory management.</div>
+        <div class="service-icon"><svg class="ico"><use href="#i-cart"/></svg></div>
+        <div class="service-title" data-es="Comercio Electrónico">E-Commerce</div>
+        <div class="service-desc" data-es="Tiendas en línea que maximizan ingresos con experiencias de compra fluidas, integraciones de pago y gestión de inventario.">Online stores that maximize revenue with seamless shopping experiences, payment integrations, and smart inventory management.</div>
         <div class="service-tags">
           <span class="service-tag">Shopify</span>
           <span class="service-tag">WooCommerce</span>
-          <span class="service-tag">Custom</span>
-          <span class="service-tag">Payments</span>
+          <span class="service-tag" data-es="A medida">Custom</span>
+          <span class="service-tag" data-es="Pagos">Payments</span>
         </div>
       </div>
     </div>
@@ -835,129 +1187,213 @@ footer {
   <div class="container">
     <div class="portfolio-header fade-up">
       <div>
-        <p class="section-label" data-en="Our Work" data-es="Nuestro Trabajo">Our Work</p>
-        <h2 class="section-title" data-en="Projects We're <span class='grad-text'>Proud Of</span>" data-es="Proyectos de los que <span class='grad-text'>Estamos Orgullosos</span>">Projects We're <span class="grad-text">Proud Of</span></h2>
+        <p class="section-label" data-es="Nuestro Trabajo">Our Work</p>
+        <h2 class="section-title" data-es="Proyectos de los que <span class='grad-text'>Estamos Orgullosos</span>">Projects We're <span class="grad-text">Proud Of</span></h2>
       </div>
-      <p class="section-sub" data-en="A selection of products we've designed and built across industries and platforms." data-es="Una selección de productos que hemos diseñado y construido en distintas industrias y plataformas.">A selection of products we've designed and built across industries and platforms.</p>
+      <p class="section-sub" data-es="Una selección de productos que hemos diseñado y construido en distintas industrias y plataformas.">A selection of products we've designed and built across industries and platforms.</p>
     </div>
     <div class="portfolio-grid">
 
-<div class="project-card fade-up" style="--accent:#22C55E; --accent-text:#22C55E">
-        <div class="project-top" style="background:var(--accent)"></div>
+      <div class="project-card fade-up" style="--accent:#3B82F6; --accent-text:#60A5FA">
+        <div class="project-shot" style="background-image:url('assets/projects/sublitool.jpg')" role="img" aria-label="Sublitool website"></div>
         <div class="project-body">
-          <div class="project-cat" data-en="Sports · SaaS" data-es="Deportes · SaaS">Sports · SaaS</div>
-          <div class="project-name">Matchball</div>
-          <div class="project-desc" data-en="Sports analytics and social platform connecting athletes, coaches, and fans worldwide with real-time stats and community features." data-es="Plataforma de analítica deportiva y red social que conecta atletas, entrenadores y aficionados con estadísticas en tiempo real.">Sports analytics and social platform connecting athletes, coaches, and fans worldwide with real-time stats and community features.</div>
-          <a href="https://matchball.io" target="_blank" class="project-link">
-            <span data-en="View Project" data-es="Ver Proyecto">View Project</span>
-            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
-          </a>
-        </div>
-      </div>
-
-<div class="project-card fade-up" style="--accent:#F472B6; --accent-text:#F472B6">
-        <div class="project-top" style="background:var(--accent)"></div>
-        <div class="project-body">
-          <div class="project-cat" data-en="E-Commerce · Registry" data-es="E-Commerce · Mesa de Regalos">E-Commerce · Registry</div>
-          <div class="project-name">Unna</div>
-          <div class="project-desc" data-en="Modern wedding registry platform with curated gift management, cash funds, charity options, and seamless sharing for couples." data-es="Plataforma moderna de mesa de regalos con gestión de regalos, fondos en efectivo, opciones de caridad y fácil compartir.">Modern wedding registry platform with curated gift management, cash funds, charity options, and seamless sharing for couples.</div>
-          <a href="https://unna.gifts/en" target="_blank" class="project-link">
-            <span data-en="View Project" data-es="Ver Proyecto">View Project</span>
-            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
-          </a>
-        </div>
-      </div>
-
-<div class="project-card fade-up" style="--accent:#F59E0B; --accent-text:#F59E0B">
-        <div class="project-top" style="background:var(--accent)"></div>
-        <div class="project-body">
-          <div class="project-cat" data-en="Social Media · Mobile App" data-es="Redes Sociales · App Móvil">Social Media · Mobile App</div>
-          <div class="project-name">OnSpot Social</div>
-          <div class="project-desc" data-en="Social media scheduling, analytics, and content management app available on the App Store for iOS and Android." data-es="App de programación de redes sociales, analítica y gestión de contenido disponible en App Store para iOS y Android.">Social media scheduling, analytics, and content management app available on the App Store for iOS and Android.</div>
-          <a href="https://apps.apple.com/us/app/onspot-social/id1641647920" target="_blank" class="project-link">
-            <span data-en="View on App Store" data-es="Ver en App Store">View on App Store</span>
-            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
-          </a>
-        </div>
-      </div>
-
-<div class="project-card fade-up" style="--accent:#3B82F6; --accent-text:#3B82F6">
-        <div class="project-top" style="background:var(--accent)"></div>
-        <div class="project-body">
-          <div class="project-cat" data-en="Productivity · SaaS" data-es="Productividad · SaaS">Productivity · SaaS</div>
+          <div class="project-cat" data-es="IA · SaaS">AI · SaaS</div>
           <div class="project-name">Sublitool</div>
-          <div class="project-desc" data-en="AI-powered video subtitling and translation tool for content creators generate, edit, and export captions in multiple languages." data-es="Herramienta de subtitulación y traducción de video con IA para creadores de contenido genera, edita y exporta subtítulos.">AI-powered video subtitling and translation tool for content creators generate, edit, and export captions in multiple languages.</div>
-          <a href="https://sublitool.com" target="_blank" class="project-link">
-            <span data-en="View Project" data-es="Ver Proyecto">View Project</span>
-            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+          <div class="project-desc" data-es="Herramienta web todo-en-uno para sublimación: genera plantillas con IA, visualízalas en un mockup 3D y descarga un PDF listo para imprimir.">All-in-one web tool for sublimation printing: generate templates with AI, preview them on a 3D mockup and download a print-ready PDF.</div>
+          <div class="project-result"><svg class="ico"><use href="#i-trend"/></svg><span data-es="+3,200 usuarios · calificación 4.9">3,200+ users · 4.9 rating</span></div>
+          <a href="https://sublitool.com" target="_blank" rel="noopener" class="project-link">
+            <span data-es="Ver Proyecto">View Project</span>
+            <svg class="ico" style="width:14px;height:14px"><use href="#i-arrow"/></svg>
           </a>
         </div>
       </div>
 
-<div class="project-card fade-up" style="--accent:#6366F1; --accent-text:#6366F1">
-        <div class="project-top" style="background:var(--accent)"></div>
+      <div class="project-card fade-up" style="--accent:#F472B6; --accent-text:#F472B6">
+        <div class="project-shot" style="background-image:url('assets/projects/unna.jpg')" role="img" aria-label="Unna website"></div>
         <div class="project-body">
-          <div class="project-cat" data-en="Architecture · Web App" data-es="Arquitectura · App Web">Architecture · Web App</div>
-          <div class="project-name">Arqax</div>
-          <div class="project-desc" data-en="Architecture project management and visualization platform project tracking, 3D model integration, client presentations, and team collaboration." data-es="Plataforma de gestión y visualización de proyectos de arquitectura seguimiento de proyectos, modelos 3D y colaboración de equipo.">Architecture project management and visualization platform project tracking, 3D model integration, client presentations, and team collaboration.</div>
-          <a href="https://ronaldo-avalos.github.io/arqax-prj/" target="_blank" class="project-link">
-            <span data-en="View Project" data-es="Ver Proyecto">View Project</span>
-            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+          <div class="project-cat" data-es="E-Commerce · Mesa de Regalos">E-Commerce · Registry</div>
+          <div class="project-name">Unna</div>
+          <div class="project-desc" data-es="Mesa de regalos curada donde los invitados financian los espacios reales del nuevo hogar de la pareja — sala, cocina, recámara — en lugar de elegir artículos de un catálogo.">Studio-curated wedding registry where guests fund the real spaces of a couple's new home — living room, kitchen, bedroom — instead of picking items from a catalog.</div>
+          <a href="https://unna.gifts/en" target="_blank" rel="noopener" class="project-link">
+            <span data-es="Ver Proyecto">View Project</span>
+            <svg class="ico" style="width:14px;height:14px"><use href="#i-arrow"/></svg>
           </a>
         </div>
       </div>
 
-<div class="project-card fade-up" style="--accent:#2DD4BF; --accent-text:#2DD4BF">
-        <div class="project-top" style="background:var(--accent)"></div>
+      <div class="project-card fade-up" style="--accent:#F59E0B; --accent-text:#F59E0B">
+        <div class="project-shot" style="background-image:url('assets/projects/onspot.jpg')" role="img" aria-label="OnSpot Social on the App Store"></div>
         <div class="project-body">
-          <div class="project-cat" data-en="Wellness · Mobile App" data-es="Bienestar · App Móvil">Wellness · Mobile App</div>
+          <div class="project-cat" data-es="Red Social · App iOS">Social · iOS App</div>
+          <div class="project-name">OnSpot Social</div>
+          <div class="project-desc" data-es="App social para iPhone basada en lugares: publicaciones con foto, un mapa en vivo de los spots de tus amigos y perfiles con seguidores.">Place-based social app for iPhone: photo posts, a live map of your friends' spots, and follower profiles.</div>
+          <div class="project-result"><svg class="ico"><use href="#i-check-circle"/></svg><span data-es="Disponible en el App Store">Live on the App Store</span></div>
+          <a href="https://apps.apple.com/us/app/onspot-social/id1641647920" target="_blank" rel="noopener" class="project-link">
+            <span data-es="Ver en App Store">View on App Store</span>
+            <svg class="ico" style="width:14px;height:14px"><use href="#i-arrow"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="project-card fade-up" style="--accent:#22C55E; --accent-text:#4ADE80">
+        <div class="project-shot" style="background-image:url('assets/projects/matchball.jpg')" role="img" aria-label="Matchball website"></div>
+        <div class="project-body">
+          <div class="project-cat" data-es="Deportes · SaaS">Sports · SaaS</div>
+          <div class="project-name">Matchball</div>
+          <div class="project-desc" data-es="Nuestra propia plataforma de pádel: crea, gestiona y únete a torneos y ligas, con visibilidad total para jugadores y clubes y comunidades de jugadores.">Our own padel platform: create, manage and join tournaments and leagues, with full event visibility for players and clubs and built-in player communities.</div>
+          <div class="project-result"><svg class="ico"><use href="#i-check-circle"/></svg><span data-es="iOS, Android y web en pocos meses">iOS, Android &amp; web in a few months</span></div>
+          <a href="https://matchball.io" target="_blank" rel="noopener" class="project-link">
+            <span data-es="Ver Proyecto">View Project</span>
+            <svg class="ico" style="width:14px;height:14px"><use href="#i-arrow"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="project-card fade-up" style="--accent:#2DD4BF; --accent-text:#2DD4BF">
+        <div class="project-shot" style="background-image:url('assets/projects/tendjournal.jpg')" role="img" aria-label="Tend Journal website"></div>
+        <div class="project-body">
+          <div class="project-cat" data-es="Bienestar · App">Wellness · App</div>
           <div class="project-name">Tend Journal</div>
-          <div class="project-desc" data-en="Mental wellness journaling app with AI-guided prompts, mood tracking, habit streaks, and personalized insights for daily mindfulness." data-es="App de journaling de bienestar mental con prompts de IA, seguimiento de estado de ánimo, hábitos e insights personalizados.">Mental wellness journaling app with AI-guided prompts, mood tracking, habit streaks, and personalized insights for daily mindfulness.</div>
-          <a href="https://tendjournal.app" target="_blank" class="project-link">
-            <span data-en="View Project" data-es="Ver Proyecto">View Project</span>
-            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+          <div class="project-desc" data-es="Diario de un minuto al día — registra tu estado de ánimo, logros y gratitud, y descubre patrones con reflexiones semanales y un radar de tus áreas de vida.">One-minute-a-day journaling — log mood, wins and gratitude, then watch patterns emerge with weekly reflections and a life-balance radar.</div>
+          <a href="https://tendjournal.app" target="_blank" rel="noopener" class="project-link">
+            <span data-es="Ver Proyecto">View Project</span>
+            <svg class="ico" style="width:14px;height:14px"><use href="#i-arrow"/></svg>
           </a>
         </div>
       </div>
 
-<div class="project-card no-link fade-up" style="--accent:#F97316; --accent-text:#F97316">
-        <div class="project-top" style="background:var(--accent)"></div>
+      <div class="project-card fade-up" style="--accent:#6366F1; --accent-text:#818CF8">
+        <div class="project-shot" style="background-image:url('assets/projects/arqax.jpg')" role="img" aria-label="Arqax website"></div>
         <div class="project-body">
-          <div class="project-cat" data-en="Branding · Web Design" data-es="Branding · Diseño Web">Branding · Web Design</div>
+          <div class="project-cat" data-es="Arquitectura · Diseño Web">Architecture · Web Design</div>
+          <div class="project-name">Arqax</div>
+          <div class="project-desc" data-es="Sitio web para un estudio de arquitectura, interiorismo, espacios comerciales y mobiliario de lujo — una presencia digital a la altura de su obra.">Website for an architecture studio covering architecture, interiors, commercial spaces and luxury furniture — a digital presence that matches the quality of its work.</div>
+          <div class="project-result"><svg class="ico"><use href="#i-check-circle"/></svg><span data-es="Cliente recurrente">Repeat client</span></div>
+          <a href="#contact" class="project-link">
+            <span data-es="Demo bajo solicitud">Demo on request</span>
+            <svg class="ico" style="width:14px;height:14px"><use href="#i-arrow"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="project-card fade-up" style="--accent:#F97316; --accent-text:#FB923C">
+        <div class="project-shot placeholder" role="img" aria-label="Iago Design logo"><img src="assets/logos/iago.svg" alt="" style="height:46%;width:auto"></div>
+        <div class="project-body">
+          <div class="project-cat" data-es="Branding · Diseño Web">Branding · Web Design</div>
           <div class="project-name">Iago Design</div>
-          <div class="project-desc" data-en="Brand identity and digital portfolio for a creative design studio visual systems, typography, and web presence built from the ground up." data-es="Identidad de marca y portafolio digital para estudio de diseño creativo sistemas visuales, tipografía y presencia web.">Brand identity and digital portfolio for a creative design studio visual systems, typography, and web presence built from the ground up.</div>
-        </div>
-      </div>
-
-      <!-- E-Stars -->
-      <div class="project-card fade-up" style="--accent:#A855F7; --accent-text:#A855F7">
-        <div class="project-top" style="background:var(--accent)"></div>
-        <div class="project-body">
-          <div class="project-cat" data-en="Entertainment · Web" data-es="Entretenimiento · Web">Entertainment · Web</div>
-          <div class="project-name">E-Stars</div>
-          <div class="project-desc" data-en="Entertainment discovery platform connecting fans with emerging artists, featuring live events, music streams, and community features." data-es="Plataforma de entretenimiento que conecta fans con artistas emergentes, con eventos en vivo, streams de música y comunidad.">Entertainment discovery platform connecting fans with emerging artists, featuring live events, music streams, and community features.</div>
-          <a href="https://test-e-stars.vercel.app" target="_blank" class="project-link">
-            <span data-en="View Project" data-es="Ver Proyecto">View Project</span>
-            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+          <div class="project-desc" data-es="Identidad de marca y portafolio digital para un estudio de diseño creativo — sistemas visuales, tipografía y presencia web.">Brand identity and digital portfolio for a creative design studio — visual systems, typography, and web presence built from the ground up.</div>
+          <div class="project-result"><svg class="ico"><use href="#i-check-circle"/></svg><span data-es="Cliente recurrente">Repeat client</span></div>
+          <a href="#contact" class="project-link">
+            <span data-es="Demo bajo solicitud">Demo on request</span>
+            <svg class="ico" style="width:14px;height:14px"><use href="#i-arrow"/></svg>
           </a>
         </div>
       </div>
 
-
+      <div class="project-card fade-up" style="--accent:#A855F7; --accent-text:#C084FC">
+        <div class="project-shot placeholder" aria-hidden="true"><span>e*stars</span></div>
+        <div class="project-body">
+          <div class="project-cat" data-es="Entretenimiento · Web">Entertainment · Web</div>
+          <div class="project-name">E-Stars</div>
+          <div class="project-desc" data-es="Plataforma de entretenimiento que conecta fans con artistas emergentes, con eventos en vivo, streams de música y comunidad.">Entertainment discovery platform connecting fans with emerging artists, featuring live events, music streams, and community features.</div>
+          <a href="#contact" class="project-link">
+            <span data-es="Demo bajo solicitud">Demo on request</span>
+            <svg class="ico" style="width:14px;height:14px"><use href="#i-arrow"/></svg>
+          </a>
+        </div>
+      </div>
 
       <!-- And More -->
       <div class="project-card fade-up" style="--accent:linear-gradient(135deg,#7C3AED,#3B82F6,#2DD4BF); --accent-text:#a78bfa; background: linear-gradient(135deg, rgba(124,58,237,0.08), rgba(59,130,246,0.05)); border: 1px dashed rgba(124,58,237,0.3);">
         <div class="project-top" style="background:linear-gradient(90deg,#7C3AED,#3B82F6,#2DD4BF)"></div>
         <div class="project-body" style="align-items:center; justify-content:center; text-align:center; padding: 40px 24px;">
           <div style="font-size:2.5rem; margin-bottom:16px;">✦</div>
-          <div class="project-name" style="background:linear-gradient(135deg,#7C3AED,#3B82F6,#2DD4BF);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;" data-en="And More..." data-es="Y Más...">And More...</div>
-          <div class="project-desc" data-en="We're constantly working on new products and client projects. Reach out to see our latest work." data-es="Estamos constantemente trabajando en nuevos productos y proyectos. Contáctanos para ver nuestro trabajo más reciente.">We're constantly working on new products and client projects. Reach out to see our latest work.</div>
-          <a href="#contact" class="project-link" style="justify-content:center; color:#a78bfa;">
-            <span data-en="Let's Talk" data-es="Hablemos">Let's Talk</span>
-            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+          <div class="project-name" style="background:linear-gradient(135deg,#7C3AED,#3B82F6,#2DD4BF);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;" data-es="Y Más...">And More...</div>
+          <div class="project-desc" data-es="Estamos constantemente trabajando en nuevos productos y proyectos. Contáctanos para ver nuestro trabajo más reciente.">We're constantly working on new products and client projects. Reach out to see our latest work.</div>
+          <a href="#book" class="project-link" style="justify-content:center; color:#a78bfa;" data-track="cta_book">
+            <span data-es="Hablemos">Let's Talk</span>
+            <svg class="ico" style="width:14px;height:14px"><use href="#i-arrow"/></svg>
           </a>
         </div>
       </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════ CASE STUDIES -->
+<section id="case-studies" class="section">
+  <div class="container">
+    <div class="fade-up" style="text-align:center;">
+      <p class="section-label" style="justify-content:center" data-es="Casos de Éxito">Case Studies</p>
+      <h2 class="section-title" data-es="Lo Que Construimos y <span class='grad-text'>Lo Que Dicen</span>">What We Built &amp; <span class="grad-text">What Clients Say</span></h2>
+      <p class="section-sub" style="margin:0 auto" data-es="El reto, lo que construimos y el resultado — contado por nuestros clientes.">The challenge, what we built, and how it turned out — in our clients' own words.</p>
+    </div>
+    <div class="cases">
+
+      <article class="case-card fade-up" style="--accent-text:#F59E0B">
+        <div class="case-shot" style="background-image:url('assets/projects/onspot.jpg')" role="img" aria-label="OnSpot Social on the App Store"></div>
+        <div class="case-body">
+          <div class="case-cat" data-es="Red Social · App iOS">Social · iOS App</div>
+          <h3 class="case-title">OnSpot Social</h3>
+          <dl class="case-rows">
+            <div class="case-row"><dt data-es="Reto">Challenge</dt><dd data-es="Convertir la idea de un fundador — una red social basada en lugares — en una app de iPhone pulida y lista para el App Store.">Turn a founder's idea for a place-based social network into a polished iPhone app ready for the App Store.</dd></div>
+            <div class="case-row"><dt data-es="Construimos">What we built</dt><dd data-es="Diseño de producto y desarrollo iOS: publicaciones con foto ligadas a lugares, un mapa en vivo de los spots de tus amigos y perfiles con seguidores.">Product design and iOS development: photo posts tied to places, a live map of friends' spots, and follower profiles.</dd></div>
+            <div class="case-row result"><dt data-es="Resultado">Result</dt><dd data-es="Disponible en el App Store.">Live on the App Store.</dd></div>
+          </dl>
+          <blockquote class="case-quote">
+            <p data-es="“Trabajar con Berny fue una experiencia excelente. Desde el principio demostró una notable capacidad para entender mi visión y convertir mis ideas en soluciones prácticas, liderando eficazmente a su equipo durante todo el proceso. Siempre va más allá de lo que se le pide, aportando nuevas ideas y encontrando soluciones creativas a los retos que surgen.”">“Working with Berny was an excellent experience. From the very beginning, he demonstrated a remarkable ability to understand my vision and translate my ideas into practical solutions, while effectively leading his team throughout the process. He consistently goes beyond what is asked, always bringing new ideas to the table and finding creative solutions to the challenges that arise.”</p>
+            <div class="case-author">
+              <div class="author-avatar initials">GB</div>
+              <div>
+                <div class="stars" aria-label="5 out of 5">★★★★★</div>
+                <div class="author-name">Gilberto Borja</div>
+                <div class="author-role" data-es="Fundador, OnSpot Social">Founder, OnSpot Social</div>
+              </div>
+            </div>
+          </blockquote>
+          <a href="https://apps.apple.com/us/app/onspot-social/id1641647920" target="_blank" rel="noopener" class="case-link"><span data-es="Ver en App Store">View on the App Store</span><svg class="ico" style="width:14px;height:14px"><use href="#i-arrow"/></svg></a>
+        </div>
+      </article>
+
+      <article class="case-card fade-up" style="--accent-text:#818CF8">
+        <div class="case-shot" style="background-image:url('assets/projects/arqax.jpg')" role="img" aria-label="Arqax website"></div>
+        <div class="case-body">
+          <div class="case-cat" data-es="Branding · Diseño Web · Cliente Recurrente">Branding · Web Design · Repeat Client</div>
+          <h3 class="case-title">Iago Design &amp; Arqax</h3>
+          <dl class="case-rows">
+            <div class="case-row"><dt data-es="Reto">Challenge</dt><dd data-es="Un estudio creativo necesitaba una marca y una presencia web a la altura de la calidad de su trabajo.">A creative studio needed a brand and web presence that matched the quality of its work.</dd></div>
+            <div class="case-row"><dt data-es="Construimos">What we built</dt><dd data-es="Identidad de marca, sistema visual y sitio web para Iago Design — y después, un segundo sitio para Arqax, el estudio de arquitectura e interiorismo del mismo fundador.">Brand identity, visual system and website for Iago Design — then a second website for Arqax, the founder's architecture and interiors studio.</dd></div>
+            <div class="case-row result"><dt data-es="Resultado">Result</dt><dd data-es="Cliente recurrente — dos marcas lanzadas.">Repeat client — two brands launched.</dd></div>
+          </dl>
+          <blockquote class="case-quote">
+            <p data-es="“Ha sido un placer trabajar con el equipo de Envision. Se mueven rápido, justo lo que necesitamos, y han superado nuestras expectativas de forma consistente.”">“It's been a pleasure working with the team at Envision. They move fast, exactly what we need, and have consistently delivered beyond our expectations.”</p>
+            <div class="case-author">
+              <div class="author-avatar initials">JB</div>
+              <div>
+                <div class="stars" aria-label="5 out of 5">★★★★★</div>
+                <div class="author-name">Jorge Bustos</div>
+                <div class="author-role">CEO, Iago Design / Arqax</div>
+              </div>
+            </div>
+          </blockquote>
+        </div>
+      </article>
+
+      <article class="case-card fade-up" style="--accent-text:#4ADE80">
+        <div class="case-shot" style="background-image:url('assets/projects/matchball.jpg')" role="img" aria-label="Matchball website"></div>
+        <div class="case-body">
+          <div class="case-cat" data-es="Producto Propio · Deportes · SaaS">In-house Product · Sports · SaaS</div>
+          <h3 class="case-title">Matchball</h3>
+          <dl class="case-rows">
+            <div class="case-row"><dt data-es="Reto">Challenge</dt><dd data-es="Crear una plataforma para que clubes y jugadores creen, gestionen y se unan a torneos y ligas de pádel.">Build a platform that lets clubs and players create, manage and join padel tournaments and leagues.</dd></div>
+            <div class="case-row"><dt data-es="Construimos">What we built</dt><dd data-es="Nuestro propio producto: apps iOS, Android y web diseñadas y construidas en paralelo por un solo equipo, con gestión de eventos y comunidades de jugadores.">Our own product: iOS, Android and web apps designed and built in parallel by one team, with event management and player communities.</dd></div>
+            <div class="case-row result"><dt data-es="Resultado">Result</dt><dd data-es="Lanzado en las tres plataformas en pocos meses.">Launched on all three platforms within a few months.</dd></div>
+          </dl>
+          <p class="section-sub" style="font-size:0.9rem" data-es="También construimos nuestros propios productos — sabemos lo que se necesita para lanzar, porque lo hacemos con nuestro propio dinero.">We build our own products too — so we know what it takes to launch, because we do it with our own money on the line.</p>
+          <a href="https://matchball.io" target="_blank" rel="noopener" class="case-link"><span data-es="Visitar Matchball">Visit Matchball</span><svg class="ico" style="width:14px;height:14px"><use href="#i-arrow"/></svg></a>
+        </div>
+      </article>
 
     </div>
   </div>
@@ -967,79 +1403,31 @@ footer {
 <section id="process" class="section">
   <div class="container">
     <div class="fade-up" style="text-align:center; margin-bottom: 0;">
-      <p class="section-label" style="justify-content:center" data-en="How We Work" data-es="Cómo Trabajamos">How We Work</p>
-      <h2 class="section-title" data-en="A Process Built for <span class='grad-text'>Speed &amp; Quality</span>" data-es="Un Proceso Diseñado para <span class='grad-text'>Velocidad y Calidad</span>">A Process Built for <span class="grad-text">Speed &amp; Quality</span></h2>
-      <p class="section-sub" style="margin: 0 auto;" data-en="We follow a proven 4-step framework that keeps projects on time, on budget, and exceeds expectations." data-es="Seguimos un marco probado de 4 pasos que mantiene los proyectos a tiempo, dentro del presupuesto y supera expectativas.">We follow a proven 4-step framework that keeps projects on time, on budget, and exceeds expectations.</p>
+      <p class="section-label" style="justify-content:center" data-es="Cómo Trabajamos">How We Work</p>
+      <h2 class="section-title" data-es="Un Proceso Diseñado para <span class='grad-text'>Velocidad y Calidad</span>">A Process Built for <span class="grad-text">Speed &amp; Quality</span></h2>
+      <p class="section-sub" style="margin: 0 auto;" data-es="Seguimos un marco probado de 4 pasos que mantiene los proyectos a tiempo, dentro del presupuesto y por encima de las expectativas.">We follow a proven 4-step framework that keeps projects on time, on budget, and beyond expectations.</p>
     </div>
     <div class="process-grid">
       <div class="process-step fade-up">
         <div class="step-num">01</div>
-        <div class="step-title" data-en="Discovery" data-es="Descubrimiento">Discovery</div>
-        <div class="step-desc" data-en="We deep-dive into your business goals, target users, and competitive landscape to define a strategy that works." data-es="Profundizamos en tus objetivos de negocio, usuarios objetivo y panorama competitivo para definir una estrategia que funcione.">We deep-dive into your business goals, target users, and competitive landscape to define a strategy that works.</div>
+        <div class="step-title" data-es="Descubrimiento">Discovery</div>
+        <div class="step-desc" data-es="Profundizamos en tus objetivos de negocio, usuarios objetivo y panorama competitivo para definir una estrategia que funcione.">We deep-dive into your business goals, target users, and competitive landscape to define a strategy that works.</div>
       </div>
       <div class="process-step fade-up">
         <div class="step-num">02</div>
-        <div class="step-title" data-en="Design" data-es="Diseño">Design</div>
-        <div class="step-desc" data-en="Wireframes, prototypes, and high-fidelity designs crafted iteratively with your feedback at every stage." data-es="Wireframes, prototipos y diseños de alta fidelidad elaborados iterativamente con tu retroalimentación en cada etapa.">Wireframes, prototypes, and high-fidelity designs crafted iteratively with your feedback at every stage.</div>
+        <div class="step-title" data-es="Diseño">Design</div>
+        <div class="step-desc" data-es="Wireframes, prototipos y diseños de alta fidelidad elaborados iterativamente con tu retroalimentación en cada etapa.">Wireframes, prototypes, and high-fidelity designs crafted iteratively with your feedback at every stage.</div>
       </div>
       <div class="process-step fade-up">
         <div class="step-num">03</div>
-        <div class="step-title" data-en="Development" data-es="Desarrollo">Development</div>
-        <div class="step-desc" data-en="Clean, scalable code built with modern tech stacks, rigorously tested for performance, security, and reliability." data-es="Código limpio y escalable construido con tecnologías modernas, rigurosamente probado para rendimiento, seguridad y confiabilidad.">Clean, scalable code built with modern tech stacks, rigorously tested for performance, security, and reliability.</div>
+        <div class="step-title" data-es="Desarrollo">Development</div>
+        <div class="step-desc" data-es="Código limpio y escalable construido con tecnologías modernas, rigurosamente probado para rendimiento, seguridad y confiabilidad.">Clean, scalable code built with modern tech stacks, rigorously tested for performance, security, and reliability.</div>
       </div>
       <div class="process-step fade-up">
         <div class="step-num">04</div>
-        <div class="step-title" data-en="Launch &amp; Support" data-es="Lanzamiento y Soporte">Launch &amp; Support</div>
-        <div class="step-desc" data-en="We deploy, monitor, and iterate with you post-launch ensuring your product grows and stays ahead of the curve." data-es="Desplegamos, monitoreamos e iteramos contigo después del lanzamiento asegurándonos de que tu producto crezca y se mantenga a la vanguardia.">We deploy, monitor, and iterate with you post-launch ensuring your product grows and stays ahead of the curve.</div>
+        <div class="step-title" data-es="Lanzamiento y Soporte">Launch &amp; Support</div>
+        <div class="step-desc" data-es="Desplegamos, monitoreamos e iteramos contigo después del lanzamiento — para que tu producto crezca y se mantenga a la vanguardia.">We deploy, monitor, and iterate with you post-launch — so your product keeps growing and stays ahead of the curve.</div>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════════════════════════════════════════════ TESTIMONIALS -->
-<section id="testimonials" class="section">
-  <div class="container">
-    <div class="fade-up" style="text-align:center;">
-      <p class="section-label" style="justify-content:center" data-en="Happy Clients" data-es="Clientes Felices">Happy Clients</p>
-      <h2 class="section-title" data-en="What Our Clients <span class='grad-text'>Say About Us</span>" data-es="Lo Que Dicen Nuestros <span class='grad-text'>Clientes</span>">What Our Clients <span class="grad-text">Say About Us</span></h2>
-    </div>
-    <div class="testimonials-grid">
-
-      <div class="testimonial-card fade-up">
-        <span class="quote-mark">"</span>
-        <p class="testimonial-text" data-en="Working with Envision was straightforward, consultative, and proactive. We built an iOS, Android, and web app in just a few months and launched successfully to market. Genuinely thrilled with how it turned out." data-es="Trabajar con Envision fue fácil, consultivo y proactivo. Construimos una app iOS, Android y web en pocos meses y lanzamos al mercado. Muy satisfechos con el resultado final.">Working with Envision was straightforward, consultative, and proactive. We built an iOS, Android, and web app in just a few months and launched successfully to market. Genuinely thrilled with how it turned out.</p>
-        <div class="testimonial-author">
-          <div>
-            <div class="stars">★★★★★</div>
-            <div class="author-name">Matchball Founders</div>
-            <div class="author-role" data-en="Matchball.io" data-es="Matchball.io">Matchball.io</div>
-          </div>
-        </div>
-      </div>
-      <div class="testimonial-card fade-up">
-        <span class="quote-mark">"</span>
-        <p class="testimonial-text" data-en="Working with Berny was an excellent experience. From the very beginning, he demonstrated a remarkable ability to understand my vision and translate my ideas into practical solutions, while effectively leading his team throughout the process. He consistently goes beyond what is asked always bringing new ideas to the table and finding creative solutions to the challenges that arise." data-es="[Testimonio próximamente.]">[Quote coming soon stay tuned.]</p>
-        <div class="testimonial-author">
-          <div>
-            <div class="stars">★★★★★</div>
-            <div class="author-name">Gilberto Borja</div>
-            <div class="author-role" data-en="Founder, OnSpot Social" data-es="Fundador, OnSpot Social">Founder, OnSpot Social</div>
-          </div>
-        </div>
-      </div>
-      <div class="testimonial-card fade-up">
-        <span class="quote-mark">"</span>
-        <p class="testimonial-text" data-en="It's been a pleasure working with the team at Envision. They move fast exactly what we need and have consistently delivered beyond our expectations." data-es="Ha sido un placer trabajar con el equipo de Envision. Se mueven rápido, justo como lo necesitamos, y han superado nuestras expectativas consistentemente.">It's been a pleasure working with the team at Envision. They move fast exactly what we need and have consistently delivered beyond our expectations.</p>
-        <div class="testimonial-author">
-          <div>
-            <div class="stars">★★★★★</div>
-            <div class="author-name">Jorge Bustos</div>
-            <div class="author-role" data-en="CEO, Iago Design / Arqax" data-es="CEO, Iago Design / Arqax">CEO, Iago Design / Arqax</div>
-          </div>
-        </div>
-      </div>
-
-
     </div>
   </div>
 </section>
@@ -1048,67 +1436,66 @@ footer {
 <section id="team" class="section">
   <div class="container">
     <div class="fade-up" style="text-align:center;">
-      <p class="section-label" style="justify-content:center" data-en="The Team" data-es="El Equipo">The Team</p>
-      <h2 class="section-title" data-en="The Minds <span class='grad-text'>Behind Envision</span>" data-es="Las Mentes <span class='grad-text'>Detrás de Envision</span>">The Minds <span class="grad-text">Behind Envision</span></h2>
-      <p class="section-sub" style="margin:0 auto" data-en="A small, focused team of designers and engineers who love building things that matter." data-es="Un equipo pequeño y enfocado de diseñadores e ingenieros que aman construir cosas que importan.">A small, focused team of designers and engineers who love building things that matter.</p>
+      <p class="section-label" style="justify-content:center" data-es="El Equipo">The Team</p>
+      <h2 class="section-title" data-es="Las Mentes <span class='grad-text'>Detrás de Envision</span>">The Minds <span class="grad-text">Behind Envision</span></h2>
+      <p class="section-sub" style="margin:0 auto" data-es="Un equipo pequeño y enfocado de diseñadores e ingenieros que aman construir cosas que importan.">A small, focused team of designers and engineers who love building things that matter.</p>
     </div>
     <div class="team-grid">
       <div class="team-card fade-up">
         <div class="team-avatar">
-          <img src="data:image/jpeg;base64,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" style="width:100%;height:100%;object-fit:cover;border-radius:50%;filter:grayscale(100%)" alt="Berny Altamirano">
+          <img src="assets/team/berny.jpg" width="80" height="80" loading="lazy" style="width:100%;height:100%;object-fit:cover;border-radius:50%;filter:grayscale(100%)" alt="Berny Altamirano">
         </div>
         <div class="team-name">Berny Altamirano</div>
-        <div class="team-role" data-en="Sales" data-es="Ventas">Sales</div>
-        <div class="team-bio" data-en="Builds client relationships and drives new business, connecting the right clients with the right solutions." data-es="Construye relaciones con clientes y genera nuevos negocios, conectando a los clientes correctos con las soluciones adecuadas.">Builds client relationships and drives new business, connecting the right clients with the right solutions.</div>
+        <div class="team-role" data-es="CEO y Director Comercial">CEO &amp; Head of Sales</div>
+        <div class="team-bio" data-es="Dirige la empresa y cada nueva relación con clientes: entiende tus objetivos y arma el equipo y el plan adecuados para tu proyecto.">Leads the company and every new client relationship, understanding your goals and putting together the right team and plan for your project.</div>
         <div class="team-socials">
-          <a href="https://www.linkedin.com/in/bernardo-berny-altamirano-9411b5139/" target="_blank" class="social-btn">in</a>
+          <a href="https://www.linkedin.com/in/bernardo-berny-altamirano-9411b5139/" target="_blank" rel="noopener" class="social-btn" aria-label="Berny Altamirano on LinkedIn">in</a>
         </div>
       </div>
       <div class="team-card fade-up">
         <div class="team-avatar">
-          <img src="data:image/jpeg;base64,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" style="width:100%;height:100%;object-fit:cover;border-radius:50%;filter:grayscale(100%)" alt="Fernando Lagunes">
+          <img src="assets/team/fernando.jpg" width="80" height="80" loading="lazy" style="width:100%;height:100%;object-fit:cover;border-radius:50%;filter:grayscale(100%)" alt="Fernando Lagunes">
         </div>
         <div class="team-name">Fernando Lagunes</div>
-        <div class="team-role" data-en="Project Management &amp; Marketing" data-es="Gestión de Proyectos y Marketing">Project Management &amp; Marketing</div>
-        <div class="team-bio" data-en="Keeps projects on track and ensures every delivery is on time, on budget, and exceeds expectations." data-es="Mantiene los proyectos en marcha y asegura que cada entrega sea a tiempo, dentro del presupuesto y supere las expectativas.">Keeps projects on track and ensures every delivery is on time, on budget, and exceeds expectations.</div>
+        <div class="team-role" data-es="Gestión de Proyectos y Marketing">Project Management &amp; Marketing</div>
+        <div class="team-bio" data-es="Mantiene los proyectos en marcha y asegura que cada entrega sea a tiempo, dentro del presupuesto y supere las expectativas.">Keeps projects on track and ensures every delivery is on time, on budget, and beyond expectations.</div>
         <div class="team-socials">
-          <a href="https://www.linkedin.com/in/fernandolagunes/" target="_blank" class="social-btn">in</a>
+          <a href="https://www.linkedin.com/in/fernandolagunes/" target="_blank" rel="noopener" class="social-btn" aria-label="Fernando Lagunes on LinkedIn">in</a>
         </div>
       </div>
       <div class="team-card fade-up">
         <div class="team-avatar">
-          <img src="data:image/jpeg;base64,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" style="width:100%;height:100%;object-fit:cover;border-radius:50%;filter:grayscale(100%)" alt="Ronaldo Avalos">
+          <img src="assets/team/ronaldo.jpg" width="80" height="80" loading="lazy" style="width:100%;height:100%;object-fit:cover;border-radius:50%;filter:grayscale(100%)" alt="Ronaldo Avalos">
         </div>
         <div class="team-name">Ronaldo Avalos</div>
-        <div class="team-role" data-en="Full Stack AI Engineer" data-es="Ingeniero Full Stack IA">Full Stack AI Engineer</div>
-        <div class="team-bio" data-en="Full-stack engineer building scalable platforms and integrating cutting-edge AI into every product." data-es="Ingeniero full-stack que construye plataformas escalables e integra IA de vanguardia en cada producto.">Full-stack engineer building scalable platforms and integrating cutting-edge AI into every product.</div>
+        <div class="team-role" data-es="Ingeniero Full Stack e IA">Full Stack AI Engineer</div>
+        <div class="team-bio" data-es="Ingeniero full-stack que construye plataformas escalables e integra IA de vanguardia en cada producto.">Full-stack engineer building scalable platforms and integrating cutting-edge AI into every product.</div>
         <div class="team-socials">
-          <a href="https://www.linkedin.com/in/ronaldoavalos/" target="_blank" class="social-btn">in</a>
+          <a href="https://www.linkedin.com/in/ronaldoavalos/" target="_blank" rel="noopener" class="social-btn" aria-label="Ronaldo Avalos on LinkedIn">in</a>
         </div>
       </div>
       <div class="team-card fade-up">
         <div class="team-avatar">
-          <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAMCAgMCAgMDAwMEAwMEBQgFBQQEBQoHBwYIDAoMDAsKCwsNDhIQDQ4RDgsLEBYQERMUFRUVDA8XGBYUGBIUFRT/wAALCADcANwBAREA/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/9oACAEBAAA/APPPAOkWUngbS5TZWzySW6sXMKkk57nFWvFOlWcE0AWxtlBQk7IlH9K4LxfbRxeEtUljgjR1gYh1QAg/WuK/ZsiOqa7dJdItyq7jiYb8cD1r6G1bw7Z/2fc+XZ2o/dPz5Cg5wfak8JaNYXXhnTp5LC1dnhUMTCpJPvxWo3h7TSRjTrT/AL8L/hT00GwBwNPtAP8Argn+FNv9HsY7OYjT7NSEPPkJ/hXnBhiWNibe34/6ZL/hWJbvG/i7SYmijMbMMrsGD16ivW/7Gspb6xQWVqQYiSDEvP6VSv8ARbI6GZPsVsH85RuEK9N/0p+veHbBtT0hY7K1Tc7bgsKjPHcY5q6PDtlEcGwtD/27r/hTxolivTT7Qf8AbBf8KwfG8NtYaHKUsrZMsoDLEoPX6VqeArbT7/w/C81lau+5gGaBSTjjrisb4j2lnaXWmhbS3RGLbljjVd35Dmul03QtPbTrb/QLMt5ak/uE9PpUsmiWKniwtB9IE/wqL+xLE8/2faH38hf8KU6PZ9rC1x/1xX/CkGjWeP8AjytQf+uCf4Uq6PZjP+hWv4wJ/hR/ZNkP+XC0P/bBf8KkXS7IAf6FaD/tgn+FZWt6Fps1zGzWNuT5eOIVHc+1Zfw6hI+H+i4OT9mUY/GpPGLFLuEHg+Wf515343m8jwVqbMRj7OwIrm/2WWjk1bUHA6q2MfhX0fdQie2ePONwIrM8BJt8LWkWd3ll0J+jGuhVBn/61P8ALBqprQ26Vcf9czXlVwMQ/XNcva3bf8J7pakZwRn9a9zszu1SxwMZgPFRaioj8L5fjdcqB9d9WNYTGvaN9XP/AI7Wq8YY1C8OOlcl8SIAfDcuf7y9PrV34bID4ch6/K7A8cda5/4ryGPUNJI6gseRXdaLsOlWRXODCuM9elWZIw1N+zqRk5/A0CCjyMCm+Vg0eTTTDWbrChZ4gf8Ann/7May/h5blPAmhAjrbp/OqnxDZLa8jZ2CYhzycd68d+IGqI/grUURhJujIxmqP7J8qyalfYXGA3FfT2AF7/wCTWT4AZW02/iHHk30yfrn+tdIU5pyrmqGvRN/ZdzxgeWea8tuIHaMHHQVx1nCx+IOn8e/6GvdLXK6xYDG3/Rj1+lM1Nlm8Jwc4P2pDz/v1Prbg+ItETPaQ+3StijaSa5f4jJs8NyEjkuvPtmtH4dWxbwrbYUDBbHpjPWuS+LyGK/0nC7j8xAru9JjI0u0yd2YlO7HXirbLim9eKNpFJsNHlml8vIo8sgVka1AWniOf+Wf/ALMaq/D8j/hA/DxABJhjGPxrl/ix4fbVNdSVrl44VjH7pepOfWvJ/iT4btLPwNqF3CjJcJgZZiQeQOlY37MCagniaWOBYxaMGMrZ5PHQV9TyO0YPHGM1leCboNfeIbcnaUvN4+jKDXVqB2OalVPQVzXxI1eXR/DVw8MD3DlcbUHIycV41pV/rt/DOZ7cWkS5VBKTvYfQdKrWOox6Z4rsZbzrGAPkUksTkCvoNbdP7TsyBk/ZcgfhXO6q8kXhyzQKPnu0Bz/v1d1JmfxPpGT0WT+VdCE3CpUTH41y3xMTHhp2P/PRMD8a1vhxFu8K2hCttJY4z71x/wAZE/4melIM8huR16jiu+0yHdpFkSpQ+SuV9OKcyc0m3HSgrmlVc04JSFcGgLkVla38lxEMf8s+/wDvGsn4cgSeAPDeTj9zGc/iaofEKaOLVJVKGX92uAD0Oa8u+L2oEfDm6jWCMCWRVO0YIGazf2dDB4fsLi9vjHHFM2UbcpOMYORnNe9w+ItJvwPLvYuVz8zAVmeHri0tPFGtubmEQzpA6PvGGOCDj8q6wajZgfLPGfoRUw1ayhgLvcKAOTyDXI+MfHukW9n5RuIlmuUaKNJzt3EnjFciljayWEssl6kTsT+65Y8e9c9o4iX4g6ckm0qYSF79jzXu8bA+IYFDZVbQn9BWRqdn5ug2BIyDdRn/AMfqXUbdh4t0hdn/ACzkJ/KugEOD7VLt6VyPxSAHhzOOTKo/Wtr4af8AIoWhHzH5uPT5jXEfGdtmtaWTnAjc4H1FeiaON2lWeMhfKXg89qmdFU9D+FRlMnjOPejyj604RYFPCUFKaYjmsXX0P2qLj/lkP/QjWJ8OBu8AeGgOT9nT+ZrnfHszf27MDkYReteX/GS4VPAIB5LXKiqfw2tLC68DCaWCNysjjcRknn+VdIdDsnjXdaR79gYlSR/KqNxoGnhIXEcib3wu2VvWrB8PWjfLuuFQHHE7Zz+dTweEIAhf7VeBQeguDz7VxvjfwVqP9nS3cerSTiLlYblN20Z4AbrxVyDxfrXh21T+29NWey24+12Lbtgx1ZOv41oeE54ta8cWLRSiWFkDJIhzxtJGK+lrRCPEGGA/48z+HAqpqse7QNDwMk3Uecf71TanHnxjpQHJ8iUn9K2/KwacYxXE/Fh/L8MkZx+9T8ea2Phirr4P0/eQG2twOwya4b4zMy+ItHycExPtPvkdfavUNLj26ZaITk+UvI+lTtH+dN2e1IyUuzim7Ka6c03afQ1j6+pFzDx/yy/9masL4bceA/DGOpgQfzrmvHX73xBeHsAgryL45y+V4Gjx0NyP5Vk/Cu+mHgKWMgY81wvPXmvQ4ZHZVxz+5FJcxExaWMbQXzyeaufZvOjK7gN0mevYVcvvEkhZ41tbb5QTlVIyOnPvXkfjTwnqt7eSXdnrNxbw+X5j2ZYshxziuu0u/uL/AEO3uHsw0ToNzxHOO3Iqr4NsLfRvH9s9qpihbdI6IMIMrww9Oa+lbK48zX5eclbI8/gKdeFV0PQA33nuYwPrkmrd/Eh8a2GOotZD+tbLR8Uixda4T4xxlfCylf8Anun862/hfGF8F6cCMHa2fb5jXA/G+If8JHo4DcmNsZ/3hXrekQ/8S20JxkxJ0+lTyQgsT60wRAdqjKEkjBpChHGKTbTWX5hxSrET0rD8RAi7i/65f+zNWH8MlD+BPCwxz9nT+RrkfHCsviK/x0yo/SvH/jrDJJ4It0Xkm6A/SqHw3stPh8Fxx3VxJDcvI7NsjYhRn1Fda19o1tE4/tIxggbshhn9Kr/8JHok7wtHraDYeAXxs4xxV9Nd0dxGF1yEFemZRyfWrcP2CVZNmtW5LDlvNX8qnbSEuwzjUIbhWQgKrr6e1UvB8DxeGWTJzDK8f5NT/DNr5mvTkgGSBtgb/ZYg/wA6940+EDXrwjtY4/lS6kcaZ4ZHrdof0NT3Upbx9Z56fY34/wCBV0tOWOuE+MsTjwxGU+8Z1A9BW78LIA/gjTSmSuw43f7xrz/45xhPFGkA8nyWJI7jcMivXtNRTptoVBVfJXCnqOBUjpUeOKTBHf8ASmkZ5xTTGDjtR5QzQseCa57xKuL2L/rl/wCzNWV8KIFfwR4Vxn/j2XH5GuP8cqw8Q6gSB/rAOntXjfx4ujB4MssYDNd56e1Hw+u1k8AwO7iMYclsdDnrXokPwCk8WaZbTaxq0qQyxK4hslCcnnknOa5/xP8AsuaRpOnJNBqt+qmeKNg+0gKzhSfrzWun7G+ncFdevRj+8i1q2v7MV1okTy6brKXrY5t76PCsPr2Nc+llHpomSWCNJoyVJCgYNHh5kifU7TJ4lEqjPZqm8Ipu8U6svbMf/oVe9QW+zXNRwOlnVHWImW18JoP4rtM/TaalnU/8J/bDsLNsf99V1KpxUkYOcCuJ+MsYPhWMHjNwhP0FdP8ADOEHwNpO4ceWWIXjjccV5h8e9kXinSAAEBhY7v7p3cGvXdNJ/suzPJBiXJPXOKkcA0zZxTdnBpBHkUvl0FMUbK5vxOoF9F/1yH/oTVlfCEbfBXhMMTj7KD/OuF8eXI/4STUNpJBmH8q8M/aEndPDmloASGuGP6Ctz4C6e2s2Hh+2aBZoDIZJ0YcbQSefXnHFfWUJXyo1wAoUYAHSs/xtYJP4RvmDcoqyZ/3SD/Sult9kltG6nIZQ2fqKeMr904+lfPfxQ05dI8UX5RZUjmXzRuHy5PXFcXbyyW/iVSuQlzbgZ9wa3fAGJfFeqByc7416/wC1X0HCoGs6tg52WneoNVtt6+ER2+0Bv/HDSTWbD4ip3AsSQP8AgVdOLckYxipY7bbnvXn/AMcX8vwrbrxzcrzXXfDJw3gbSc/88s/qa8n/AGg8/wDCV6SFAK+QV+uWHB9q9k06FVsLULziJf5CnvEe1MxjigihQKdgU09egpK5zxOB9ui4/wCWQ/8AQmrA+E0jf8IP4TUDI+xZ/Q1554rfzPEV8e32lq8c+P8Ak6TpCY/5bOf0Feifsu6LNeCxuAQLa0tmZ89SWJAx+VfRQi2nnrnNU9cAutC1C2K7lkgdcD3FX/C863Xh7TnHX7OgP4DH9K2Y48ivH/jpYul5aTCMGNoSA+7vnkYrzG+txC1hcBcbCVz9asfDsmTxfqAx96aEV9CcrrfiH0W24pb8brjwep4/fZ/8hmtKOFJPiMqqwJNgOP8AgRrqvsgzxnnpUZgRQcsF+vFeW/tAWrf8IlbOpypuAAPXjpXSfDGNx4E0cM25vJHP9K8u+PeP+Ez0kODj7Pznrt39vfNe5WqbNOtV28+WpyPoKHQntUJiweaFtxyacIox0GKXy1HIprxg96b5PvWD4jTbdwj/AKZf+zNXO/CKLPgrwsP+nDNeceJ7bzNfvSG2/wCktXjfx9AS30aMkkh5Dn8BXtP7Jj20/hy4WE7nSCJXKjIDZc4+vSva5Fzux2/xqlcRFo5FHcEVD4Acnw1bKesZePH0YiuojOMmvJfjNrlrqGlwm2VppLeRkkjGAw/M15tNqFpe6ZGmHjmiOWSRdp+tWvhZbibxRduO9xDg/ga+gfszHVfEjAZAhx/OqWtsbfU/CKEclzjHtHVnTbpT8Sn3LkiyUf8Ajxrz79pn9qS1+Eti/h7Rg1z4tuocx4AK2qnjc3qT2FfNGi+Bvjv8V4J9Thvrso671a7vDGcH0Fcz4g8T/Fj4N39tYeK5rq+0tZA3kzTedEx/2W7Gv0H+B2r2Pi/4U+H9V0ucT28lvhiP4XB+ZT7g15d+0IhTxzpQPDfZ1AY9v3le42YzZQgEldi/yp7KaZsyOetATFKRjsKDyvQU3yweaCoArnPFGFvYQf8AniP/AEJqwPg+gHgzwtz/AMw4V5x4jlB1y8PH/Hw/868U/aCIY6MO3zt/Kvff2UtJt7T4Vw3UcYE1xPJ5jD+LDEDP4V6067d7ep/rUDDcTgVX8FW7Q2+oW5H+qu3x9DzXSvCRDgdT1rwX4oeCdPvfCV1qMruLo3e5XQkH733eO1ck1tDLp0MeMNsIX1yBVv4Olv8AhIrgE8G8iH6V9EqQt/4lyM/uh/I1n+IUD694PQf9ND/5DqbTbBZPiNMRkEWaZ9vmNfAeqlPHH7QPirX9cufs2l2t+6NLJnbhW2qg/LpX1V4I/aK+HWlWY03+2VFxGmMMNowK8f8A2hfH3g74iWMttpGrxXToWbyj6+3vXo//AATh1eef4a+K9OlZnt7LVVMIJ4G+P5gPxGfxro/2hWMnj7SkKnHkrn/v5XuVtGY7SMYwNq4H4U4+9N5zSGmnpSZI7UhJJpCDiuc8URbr2AkkfuR/6E1c58G5/P8ABfhUD739mqa86163zqdwx6mZ/wCZrw/9oScQto6nrtf+Yr6O/Zam3fB3SsdGlmP/AI+a9PcMUPPU0wRE5ycd6g8LzNDrusW5wSxjmA+q4P8AKuoaQ+U7HoAea8H8UaDqsvha4u/tBNjNOxVWORuyf0rhWjkMtojp5ewkbs5DfL1FRfB6af8A4Se5TOVGoIP0FfRsE8gn8TljhhF/SptRQP4o8G5bkpKSP+ACtvRvl8f3wAXAtI8frXyivwgn1mHx94daZYr2TVHubcADa7k5GT+NcL4M+C+jfCzXdR1n4kWk0trJaTRWccEfmxGVlIDMR0weleB638PdU8PWy6q6k6RMxaOXOCQDwCPWvv79hDwrJ4W+CS3cqFJdZvHvgGHO3ARf0X9aj+PbmT4k6RGXIHkoWP8AwOvoZUAt053AAAH8Kry4zUXPajBowKRlyKbtNOArB8SgG8hz/wA8v/Zmrwf4ffHzwf4C8L6ba6pqDT3ltaLGIYY+U4+6T3rgNX/aD8N3d4zRCZlZ2ctgcZNea/FXxPpnjyexaxnCCFSGEx29T2r6p/Zbv9JX4W6fp0F/by30AdpYFkBdMtnpXrBOehpNu78Oao6WnleNAc4M1ow+u1v/AK9dVfxiOwnbIAVGP6V4Fq/iy8ufDA00RbLeOYssm3hueleFfFn4p3Ph28tbOwVYLkp5jSTDPynjgVvfsueKx4q8QSwyjF6LpJpNo+VgeMivrAW2R4mY8fu8UmqJ5HjPwkCMhbeVv/HcVqeG3V/iDqMhIwLaPjPTrXgvxr+I/hvwF8VzJpupWd3PfJ5l5BBMG8qQcfNjpmq+ram+teGZ51s77xLaXCEosd8ka25PouK+Y9cjn8UazpfhV77zJ5bjbIZCNsYJ+7noSBxmv038BeF49D8DaLZWyhY4rWNFAHGAMcflXhnx8s5IviVpPTAhiAJ9TLXvoJ8lVPXA/lVaQfNUYFFFGKKXGa5vxQP9Oh5/5ZD/ANCavz50XwF4j8eeIYdN04RpLdFjCZ0CoVAz941Rufh7f6TrP2O9ms57uKVkmtRFyMf7QHNZd94f1V7trNrCCzcq8qll2AIvfNdD8HrDWfD2pjXrKQtBGNrmJ8tj3A+lfWPwv+Nlp4h010vRI80bfLKgzvX1I9jxXpMHiXT7y2MqThV9G+U/lWLH4l04eItNuY7pcRSmGTPYMOh/ECu81XVLSfQ7qRJkIMRIwfavm/4lfEe08K+GdC0uC0fUdQubhwyoQPJUHktXz38bltPE+sHUILO5lkWFYY3b5Iwo747nNd7+xXpFtDrl3d+YxvBPHEYyuNqdQfxr69S8jlh8TJvUygBdgPPXFc18Vfit4d+HuvaHd6heJNPaWUubWFgX3kDapHbPvXxN8Vfjt4i8e+KH1OG9n0q1c+ULaxlZFCdt2D8x+tbXhX9nyHxZ8JLrWbW4M3iWaVpixflQDwh+vrXkgk8Q6XHcWIvLy3ETEPb7yuD3FctqTz2knEjecWzuVjuz9a+h/gx+2J8QfhTYWulNdRa/YD5ha6mNzRD0V85A9q+i/G3ja0+J2v8AhjX7IRqt7bW7SxKwbyWMnKn3r6RuVSMKFIPAHFZ0jZeml8Hmk80/3B9aCcU4SdqQtzmlL8VzPidv9Nh/64j/ANCavlXw5Y2dppNrcw3s9tdvGCJE4KeoHNZWq2VrbyTahPey3DoxZiWwTnr2zmsnxXbQnTY7tCLl5F8tY3nwcHrk1W8JWAs7eYrImnRzDDxx3IYFR0/Guu+HLw6TJblJYrmCESoxt42ZzubI59iK3vE3xZ0rRtLlvI3N0yHYIFBB3e9cP4E+LOr+OfEsPh2z0xP7S1C4X7PsfGHDAjOe2Aa+vfC/wR1bx/4g0zSF1BtCS0jlub68zvWO2XPVe56ivz38e+PhqvxA8Utp8rSaf9vkjgc5+aNCVVh6Zxn8ayIvFN0gXFw+Bxw5/ka2vCPxXufCGsR6nbOLa8hwVnjXG7HZ1HDCvaNe/aGtk8GpfaZciTxJrqMLoRjEdoueoz1YkcV8/axqM97dST3Ez3M8pLNLIxZifUk1gXNuV/eBSAfvKP516l8LfGl9YWnl6ddTWt5CNm6M5V17ZB4NHxKTVPFd0bho7WDUygac26bdy+r+hriIdJ0zwbbC/wBTj+13z/MkLfdQdifc1yoczXEs2MTTsXc9kU8hfrW/ofjPVvCN7b3Gm3TwmNhIIycoSpyMjvzX6O/AH402fxs8Ix3iMkOsWwCX1op4jf8AvAf3TXpMtuVPXP4VGyqBycH0qLIo3DOKM+goZgv3uKjMylcjJ/CsDxMM3kP/AFyH/oTV8oeAdEtxpMFxNzIUDB5GLY+laniPw1ZTeHruVnLysyqoClRyRzXNfEnwfp8a6LFDDJFDGjMQB94gCuQsrO1s47iVZ1DRtt8kclQeldf4NtPEljolnOI42gvI5jbuG2kAZOTj8etclceEzqPha81e9nEcG15NijncjANn86yvg54g0vwx8S9E1iS/fybW6DzuqZeJM4PHrg19h6l+1VYWvhbxHp3hu/KXeoWv2Rd3yzSxyOd233wcfjXxv8QvhLF8O5Yr0XiTLfDcbfOWjJGSDj3rza7bZu28ENtx/KsbM017HGg3FztZfSugDm1iRFG0LwM88VYF2LiQAMMjrmpQ69CcivSvhZ8Zo/hloutaNd+F9O8R6Fq5VporgeXc27rwHgmHKsM9OlbWgWGm+JpYzpN41vpl9IZJLvVDsMCr1ErdOPbr2qD4x+P/AIZ6L4HvfBPgnRz4s1a/kU6l411SMx4KnISzj6qn+0eteEbBH5arkD0qVhmWIn1xXrH7MHxJHwy+KWmXruU069k+x3a7sLsY4DH1wcGv0fvPEWnsQ63CMpGQVbOfwrIn8SWeN3mYz7dagl8V2ccWVJZv7tUpPFUhyY41Qerc1Rm8UXZb5piq+iKMUxtevGILTtgdqsW3iydHw8asvYk4qn4h8SRyXMBMTA+VyM/7TV81+HPHHh3S9MgtbrVLS3kSNVZJQwIPpU/iDx/oWoafHaWWpW1wWlRiISTgA9a4z4t/ECC++xLaTxvt+QGFs4yRXnem62Y/E9/AsElzM8h4VflH1r2FfiDBY+EtC0FZ0bUIll3MnOzKnIz7Zrzayh1rxBoLr9sS2sYZZIfOkPyybh0VerMTio/DHwu1K88Pa0trG1rfWsVtO6yKRIxZyCMdvWvoJ/gRpuhw+Er3UryW81a4JeUQD5WjjQMF+ma8k/aUmRPEOnFUMIljZ/LznPpXid5B5x8xchW4cDt706ytBaXEly5Dug8sEdGzTbmb5GJ6jpWbBPiVsHALYrUS49+lMmuyi8En2zXpXhu0a5/Z68c3Jmb9xqVkqJnoGDFsfXiuv/YZ+CuifHD4vTWviQGTQtF02fVLi1UkG48tSQvHOM9a+lfAXxo+FH7SniOy+EV18HdM0K0v4HsbLXrIgXcFwqnbIQFHykryMmvz48e2L+FfE+o6MzAyWF7Jas477HIz+lYFvqzxOWDYw5YZ7YOa+1/BPjTU/EfgTRtUs7dL2RogkqrLsYMBg1tRatq1yVU6fd5Xj/WAgH2Iq2/inW7R2jTSnMUab90uct7V2OlalLrWnQXIQosiBip7Gp3lYYVug6VowQvMqskavxgk0++trmKGNzAFXGCF55rmNcllNxEcYPl9/wDeavgTxQwuNauWTz5E4DBFJ5xzzWj4D0e9uNUWd7WSHTY0bMzKQuSvGSetbdjo/hjQr+3jvtQbWNRdwq21u3yIxPAJ7/Sr9udU8T+LZNN0izMjh3VoraPC46Zdu1eheB/g1pel3a2Msg8SeJcE+XET9ntSf77D7x9q948I/CCytJDDcQQX2ph1M946DbbAfwxgcBvp0717Dpng7RLDdJFYxCZ0CSSFcvIBwNx7185ftHab4q8KQaX4mv7iwh0DRLlYbaysmZZboO3Ic9sAV4P8Q1tviJc2GsaXKLO28sReRcjadxPJFeZ6hot7b3skUYV9pwGB+VqoX6Np9pDE+DKxLsB2zWNeXm1PmOKr6a7TO/BI3da1YyACKRoWkYYH416v4ajaL4CeL0YELJqtpvPY/K2Ki/Z2+N2pfs8fE7T/ABZpcaTiDdFc2sn3biFuHQ/hXtvgX9tPwN8N/iF8W/GmmeCIbbWtcVX8Mxqg2aa7ArIfbOd3FfFXiLXLjXtWu765k82eeZpnkPVmY5J/M1DbWjyRZGMdea9O+HHim70WzNquoS2sgctGFkwD68V7N4O+KOtxFhc3kcqg8CVclvxFegJ8aoEP2e9tJIsrzjkEVe0/4jaI0EcNpNHbqucBiQR7VR1n4qNY6wtnbwrcxlVJlD+teJ+Kv2s/FWoX1xp/hyxSzCuYhKAXdiDjIqLQPjr8WfBoa81KO6vbWTnbcwkr+BHSu3tf2rbLxBaxXF9pjQXaL5ciL0yDnv8AWvK7j4o6Z4Wjgt4bGK81BExIsg+RT7+tc1N8R9Y8V6m73kpgtXjdYreIYXOMABR1rc8C/BG6+zLrniudtE0lPmQyfLPN6BR1FfQHw18O3njGBbDQNPHhfwojYkmVcXF36kk8jNfQPhjwvZWdmNP0SKO2s04nv4hgu3cIe59WrtrXTLeygSK3jVI1HQDn8asx/uz83AqtrFtoGv2L6brUVne2j/ft7rayn04PevgD4i6fp2jan4g0XSgfsUFy4towcgKD0B9q8Nj06+utZmtYbp0gb5vMY9x1FS6pl5o0bJCnG4nqBXN6tJj5APlJzmrGjWxNqz5xluK01AXFWI3HcAV7N4etY3/Zh8b3RI3R61YgfijV4LdOWYnJrMv1IYOSckcVUgwZVyNwPUVvxNFtVY48jHrW94dsYrrWIBIgAVJCARn+E07Rbi5tjpVvb3DxGWObcCcgleRkGiz+Iutw2tpdPIJ3mkMQ7dMVqWvxF+16i32xmgMZ2S7kwBzjtXZ+HtftPkuIpFuY8ljtPAGPWtXw5ZaN4Y1VG0XZI94fOV7gBmyeSPzrvP8AhZ6WjmC9s1Z+h2EY/I1g6trHh7UrwznR4wzD5ibcZJ9a8g0/4Vax498WXS6baEJ5pD3c/EUY7ketes6B4V8J/CeWNLVT4s8WycK4+dEPt6c1634S+EupeM5hr3jZ1+Rd8UDNhIF+nSvTdDtn1qD7Pp0K2egR/u/tO3bJc46hfRffvXa2YSyhjihjEcSKFVF4AFX0nbtxUhkLjDHNZE/gnQNUvXurzTIp5nYb5XJ5/Wvgn436Bf8Ah3xZrSW1pEtqtzIi+WxJRc8DB9qrfEvwFD4X8M+CNTWJLR77SBNJEBy0m45ZvrmvHbhJDK2Y1dD/AHT0rl5lYzunzEKT15wK6Swi+zWkWRxjNSn5vrSBmXtnFenaLrqx/s3+MdO+YTTa3ZMPTARs15QsOYsNwap39q0luFXlgePcVnrAY4PNKFgsmw/l/wDrrQtdZitVCR2S7+nzMTW3pmqPZ3UN1MEULu+VOMcGtrTIImvbWbG1orR5V/4FnIrCstKmex8OQFSTJdGTgfwkjn8quS6araz4xjVAfKicqfTmum8D2zp4Ftp1HDeauR16mvN7PxdqunPhbgyhCQolGcc9j1rsYvG89gsFzqViymZRtl3bgfwrq4PiQzwRgX0ToqgLuXBA7DpXrHh2bXvG9vb6F4e09oIVTbPcngP6njtXtngf4EaZ8PrA6lf3vlXSrvmnIBI9gTXY2VjN40dZLqJ7bw8hBhtW+V7rH8UncL6L3rrB5aKqIAqKNoVeBil2fl9KeCQOKeHY1btCSNp5B5r5I+PXhyVPFfiOB4xtkYXCc4yrL2/KuA+P9/bX/hTwXHa3C3EFvoqRMA2WSQNhg3p0rwOSIKCExkj+M1krEUurq3Kw7Zozkoct+FXbd1FuAwOVGOlAbBGeBUiNCx++QenSvVdNXT4/2cNaQnN7N4ghI+XqixHv9a8llQcgdT6VRu2NuFDnAPepF1C3ttNuIDFvMrrL8vsMf1qDTZYGJWGCRFP8eAT+dWL6yjKMPMl3twNxyK7vR7FhJFlQGGndq0vDtoiQeGC6g/uG6/SsiS3H/FUXIIDvvRvfJGK6DwjaNZ+B/sb/AHow7KT09a5/W/hPHYfDqz8RxOXaWX9+G6KGPBH4034o2UKeENEdQqlVGSP92obTR7OSxtGYAs0KEnPtX2x8K9V0rwl4C0a9uGMLSW6sfLXMkz5PyqOpJr0TRNP1HxPcpq/iQGGENvs9Hz8kI7NL/ef26CuuklQjgcHtjFQb1z93b7mpR7n9RTwBinKAexP0q5aDYN36V8vftRXNjoXiVri+vJ3F1bjEcjBURR2U9xXyt48mfTdXhsWuFuN9lFcbEGRH5g3hc98Ajn3rh2uZA7Kyl89OapQbYp7p2t23tGBG2eh3DJ/KtATIkRYsRjsarpdCUEgVG1zg9cfjXrZ1KC1/ZQdhg3dx4oCbj97asWa8jtboy7WPHaoNYlE8SrnDI3HvS6DayLfr5oI3oyhTyTlTU2lPI67XjGFHGODVu7yts/G0np9a9HspdoiPcaYAfyq3pcDLD4XIJ5t2P6VmjT/M0vXpPWR1b8xXSFVtfDBKnBWLP6V1NvajWfgM9nn5pbUun+8ORXiniprjXtFtLNVO+KEyBfUqAT/WjTdw061HPES/yFfenwa8H2cfhHQtXuS17eG1Uweb92BTn7o9fevTS3ze1SLg1NEglOD2/WpjBx7U8RDaD2p4QL71atXVRgsAa+Qv26PD/iPxrr/h+w0vw9dalp9vF5hubOEsdxOCrEdBivLvC37MnxA+LXiy9vNRX/hFLD5QHu4iSI1AVI0HfCgCvFdb0iXQte1LSpZQZLO4eAsRjdtJGcdqz7qKOzCmScvMcFI85zzUl/bMwyqkt3A7VmxytG3lPGU9M1HcITIBnbkV1WrWd1afB/RXN0j2t3qk7i2B+YFVA3EehzXHB5Ejx90VVldmbJP0rtPAax3lvcCRA86Sqwc8sF2twKpw2tzaXLxXMAjCgYOMEg8g0kiC4vUhRflCsx/AV6FbjY7AjAXTVz7cVvWbIsPhFGYBxaEke22qsRVPDfiBtww0zke/zCptVnKeHHPbySP0ruvhq63Pw20tX5Qwc/rXmX2RI/GlmI9pt/MlQqe4IxVW405bW4khHCoxUfSvvH4Qy7vhp4bOMf6Gn9a7JTuIq3HDnFTogTpUokAOTSSSM44GR1prM20HoD3pqMTzx+Jq3CNykHjPPBq5brGrKCAT7c1+bP7VXgeTwh8bNe32xit9Sf7bbMeFdG6kfQg14dc3UNrdxPJGJkjcMYycbwP4aa41S3iW7MTi1my6jqMZ6ZqKTURcgCVfLb0bofxof/SlG7aMD5WDCul1Tw5qdt4S0CadWNpdrNNapnOQH2k/nXK3dq8bfvyIh6d6iit4Zl2wxTXEmedgP9K7DwHpFwurCeW3+zRiKVRzyzBCcH8KseKbgW+rNHMjxsEQcjII2jGKreGI47671NipPlWbkcdCa7S/Uwm4IB50xP5VPZTZk8OggblsiAf+AiqltdF/DWrjnHmuM/8AAq3dXhA0GVTj/U5/8drvPhbEp+Hmlr/0w6V5yybvGUCqMASv1/CnX+l4vrj5v4zX278I7Yj4Z+G8cg2SH+ddmluy4OKthgpxTy6+vNNznqOKcu7PH5ULbsZt5Y7duAnYe9TeTj1X2qRQy4P60ouFiPyAKc84PWvnb9tX4Yv8QPAC69bzC21DQEeTITd50TY3IT255zXwr4O+GuteLr6O10/Tri5mfB80xnYB6ljwK96HwG1Pwj4KikuriO+uACXslUkhf9n1xXk+t+Bra5LyWrm0cDJQrlPy7VytzoOoabkR2sE5OfnTH8q2/FnjTV/E+k+GtMSxSwh0fTxYoFPLZcszn6lqn+G/wh1Xx1rSQxQPdBWBkCnCj6t2r6K1P9nDVbSztG+12NtYRMGurezXyzGvdt38XFax+C/hlpIzpGopNYoJfmt28wFnXaSx9a+a/jN4T1TwfrTLdRpcWbjMVxAf4Rx8w7Hio/BWjRabpt7cPKzvd6eZDkdMkgV0Gq7Sbkjtpkf8qihh8q48PbiRvsmP4bRVG3Qp4NvSASJJ5Bn/AIHXR63Ju0gP0U2mD+Vdv8K7lE8FaehJOISP51w0DxzeMoz93Ej/AMxUmsXiQ6pcpjOHPNfWPwi8YXkXw70SERQMsUHlglWzgE4zzXYyeN75RgQW3/fLf/FVWl8bXuc+Tbf98t/8VUf/AAm16TzDb/8AfLf/ABVWU8bX2f8AVW//AHy3/wAVViLxreg/6i26f3W/+KqX/hOb/OPJtv8Avlv/AIqmSeO77d/qLb/vlv8A4qqknj/UAxAgteuPuv8A/FUkfji+d+Ybf/vlv/iqr+JPFlzeeHdQgmt7Z4nhYFSjHI/OvIfDnii6tInEUUCDjhUwPyBp13421H/hMLhv3W1dPOE2naD3OM9awNcgsD4XjSPSbKCWUgtcRRkSZJ55JNefxeEdM1DXNRSeEukcRZV3YwcevWtjw74b0SzsrKY6LZXEzQ5aS4VnJJPXriup+GOtzeD9T1Kx06KFbbzS4V1JwT756fWuz8Q+JbrW9UgtLpIzZyRnzLdNypJx/FzzXG/DvVZLLQb21hiiSNb6bBC88HjvXkfxgvZrzxE5dyAIcADoPzrIkhUWCqBtH9nBOPTmnXaeZHc5J5sUT8MVoQ26NNoTHJMVnsX6Y71H9nRPBbRAcGdznv8Aeq3roD6DsxgCLGR1roPh7cvZ+GLWOPBUL/F1rlYoVTxAbgE79znHbrSXsYmu5ZGzuZsmv//Z" style="width:100%;height:100%;object-fit:cover;border-radius:50%;filter:grayscale(100%)" alt="Ricardo Barrera">
+          <img src="assets/team/ricardo.jpg" width="80" height="80" loading="lazy" style="width:100%;height:100%;object-fit:cover;border-radius:50%;filter:grayscale(100%)" alt="Ricardo Barrera">
         </div>
         <div class="team-name">Ricardo Barrera</div>
-        <div class="team-role" data-en="Backend Engineer" data-es="Ingeniero Backend">Backend Engineer</div>
-        <div class="team-bio" data-en="Architects robust backend systems and APIs that power seamless, high-performance applications." data-es="Diseña sistemas backend robustos y APIs que impulsan aplicaciones de alto rendimiento.">Architects robust backend systems and APIs that power seamless, high-performance applications.</div>
+        <div class="team-role" data-es="Ingeniero Backend">Backend Engineer</div>
+        <div class="team-bio" data-es="Diseña sistemas backend robustos y APIs que impulsan aplicaciones de alto rendimiento.">Architects robust backend systems and APIs that power seamless, high-performance applications.</div>
         <div class="team-socials">
-          <a href="https://www.linkedin.com/in/rbarrera87/" target="_blank" class="social-btn">in</a>
+          <a href="https://www.linkedin.com/in/rbarrera87/" target="_blank" rel="noopener" class="social-btn" aria-label="Ricardo Barrera on LinkedIn">in</a>
         </div>
       </div>
       <div class="team-card fade-up">
         <div class="team-avatar">
-          <img src="data:image/jpeg;base64,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" style="width:100%;height:100%;object-fit:cover;border-radius:50%;filter:grayscale(100%)" alt="Luis Ojeda">
+          <img src="assets/team/luis.jpg" width="80" height="80" loading="lazy" style="width:100%;height:100%;object-fit:cover;border-radius:50%;filter:grayscale(100%)" alt="Luis Ojeda">
         </div>
         <div class="team-name">Luis Ojeda</div>
-        <div class="team-role" data-en="Full-Stack Developer" data-es="Desarrollador Full-Stack">Full-Stack Developer</div>
-        <div class="team-bio" data-en="Builds robust backend systems and sleek frontends with a passion for clean, maintainable code." data-es="Construye sistemas backend robustos y frontends elegantes con pasión por el código limpio y mantenible.">Builds robust backend systems and sleek frontends with a passion for clean, maintainable code.</div>
+        <div class="team-role" data-es="Desarrollador Full-Stack">Full-Stack Developer</div>
+        <div class="team-bio" data-es="Construye sistemas backend robustos y frontends elegantes con pasión por el código limpio y mantenible.">Builds robust backend systems and sleek frontends with a passion for clean, maintainable code.</div>
         <div class="team-socials">
-          <a href="https://www.linkedin.com/in/luis-ojeda-1a2978b5/" target="_blank" class="social-btn">in</a>
+          <a href="https://www.linkedin.com/in/luis-ojeda-1a2978b5/" target="_blank" rel="noopener" class="social-btn" aria-label="Luis Ojeda on LinkedIn">in</a>
         </div>
       </div>
-
     </div>
   </div>
 </section>
@@ -1116,15 +1503,30 @@ footer {
 <!-- ═══════════════════════════════════════════════════════ BOOK A MEETING -->
 <section id="book" class="section" style="background:var(--bg); padding: 80px 0;">
   <div class="container">
-    <div class="fade-up" style="text-align:center; margin-bottom: 48px;">
-      <p class="section-label" style="justify-content:center" data-en="Book a Meeting" data-es="Agenda una Reunión">Book a Meeting</p>
-      <h2 class="section-title" data-en="Ready to <span class='grad-text'>Get Started?</span>" data-es="¿Listo para <span class='grad-text'>Comenzar?</span>">Ready to <span class="grad-text">Get Started?</span></h2>
-      <p class="section-sub" style="margin:0 auto 32px" data-en="Pick a time that works for you and let's talk about your project no commitment, just a conversation." data-es="Elige un horario que te funcione y hablemos de tu proyecto sin compromiso, solo una conversación.">Pick a time that works for you and let's talk about your project no commitment, just a conversation.</p>
+    <div class="fade-up" style="text-align:center; margin-bottom: 40px;">
+      <p class="section-label" style="justify-content:center" data-es="Agenda una Reunión">Book a Meeting</p>
+      <h2 class="section-title" data-es="¿Listo para <span class='grad-text'>Comenzar?</span>">Ready to <span class="grad-text">Get Started?</span></h2>
+      <p class="section-sub" style="margin:0 auto" data-es="Elige un horario que te funcione y hablemos de tu proyecto — sin compromiso, solo una conversación.">Pick a time that works for you and let's talk about your project — no commitment, just a conversation.</p>
     </div>
-    <div style="background:var(--card); border:1px solid var(--border); border-radius:var(--radius); overflow:hidden; max-width: 900px; margin: 0 auto;">
-      <!-- Calendly inline widget -->
-      <div class="calendly-inline-widget" data-url="https://calendly.com/berny-ag30/30min?hide_gdpr_banner=1&background_color=14141e&text_color=ffffff&primary_color=7c3aed" style="min-width:320px;height:700px;"></div>
-      <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+    <div class="guarantees">
+      <div class="guarantee fade-up">
+        <svg class="ico"><use href="#i-calendar"/></svg>
+        <div><strong data-es="Llamada de alcance gratis">Free scoping call</strong><span data-es="30 minutos para entender tu proyecto. Sin compromiso.">30 minutes to understand your project. No commitment.</span></div>
+      </div>
+      <div class="guarantee fade-up">
+        <svg class="ico"><use href="#i-file"/></svg>
+        <div><strong data-es="Propuesta a precio fijo">Fixed-price proposal</strong><span data-es="Alcance, tiempos y entregables claros antes de empezar.">Clear scope, timeline and milestones before we start.</span></div>
+      </div>
+      <div class="guarantee fade-up">
+        <svg class="ico"><use href="#i-code"/></svg>
+        <div><strong data-es="El código es 100% tuyo">You own 100% of the code</strong><span data-es="Diseños, repositorios y cuentas son tuyos desde el día uno.">Designs, repos and accounts are yours from day one.</span></div>
+      </div>
+    </div>
+    <div class="calendly-shell">
+      <!-- Calendly inline widget (script is loaded when this section scrolls near) -->
+      <div class="calendly-inline-widget" id="calendlyWidget" data-url="https://calendly.com/berny-ag30/30min?hide_gdpr_banner=1&background_color=14141e&text_color=ffffff&primary_color=7c3aed" style="min-width:320px;height:700px;">
+        <noscript><div class="calendly-fallback"><a href="https://calendly.com/berny-ag30/30min">Book a 30-min call on Calendly</a></div></noscript>
+      </div>
     </div>
   </div>
 </section>
@@ -1134,83 +1536,137 @@ footer {
   <div class="container">
     <div class="contact-grid">
       <div class="fade-up">
-        <p class="section-label" data-en="Contact" data-es="Contacto">Contact</p>
-        <h2 class="section-title" data-en="Let's Build Something <span class='grad-text'>Great Together</span>" data-es="Construyamos Algo <span class='grad-text'>Increíble Juntos</span>">Let's Build Something <span class="grad-text">Great Together</span></h2>
-        <p class="section-sub" style="margin-bottom:40px" data-en="Have a project in mind? We'd love to hear about it. Send us a message and we'll get back to you within 24 hours." data-es="¿Tienes un proyecto en mente? Nos encantaría escucharte. Envíanos un mensaje y te responderemos en 24 horas.">Have a project in mind? We'd love to hear about it. Send us a message and we'll get back to you within 24 hours.</p>
+        <p class="section-label" data-es="Contacto">Contact</p>
+        <h2 class="section-title" data-es="Construyamos Algo <span class='grad-text'>Increíble Juntos</span>">Let's Build Something <span class="grad-text">Great Together</span></h2>
+        <p class="section-sub" style="margin-bottom:40px" data-es="¿Tienes un proyecto en mente? Nos encantaría escucharte. Envíanos un mensaje y te responderemos en menos de 24 horas.">Have a project in mind? We'd love to hear about it. Send us a message and we'll get back to you within 24 hours.</p>
         <div class="contact-info-item">
-          <div class="contact-icon">📍</div>
+          <div class="contact-icon"><svg class="ico"><use href="#i-pin"/></svg></div>
           <div>
-            <div class="contact-info-label" data-en="Location" data-es="Ubicación">Location</div>
-            <div class="contact-info-val" data-en="New York City / Mexico City" data-es="Nueva York / Ciudad de México">New York City / Mexico City</div>
+            <div class="contact-info-label" data-es="Ubicación">Location</div>
+            <div class="contact-info-val" data-es="Ciudad de México / Nueva York · Trabajamos en todo el mundo">New York City / Mexico City · Working worldwide</div>
           </div>
         </div>
         <div class="contact-info-item">
-          <div class="contact-icon">✉️</div>
+          <div class="contact-icon"><svg class="ico"><use href="#i-mail"/></svg></div>
           <div>
-            <div class="contact-info-label">Email</div>
-            <div class="contact-info-val"><a href="mailto:info@matchball.io">info@matchball.io</a></div>
+            <div class="contact-info-label" data-es="Correo">Email</div>
+            <div class="contact-info-val"><a href="mailto:info@matchball.io" data-track="click_email">info@matchball.io</a></div>
           </div>
         </div>
         <div class="contact-info-item">
-          <div class="contact-icon">📞</div>
+          <div class="contact-icon"><svg class="ico"><use href="#i-phone"/></svg></div>
           <div>
-            <div class="contact-info-label" data-en="Phone" data-es="Teléfono">Phone</div>
-            <div class="contact-info-val"><a href="tel:+19296404388">+1 929 640 4388</a></div>
+            <div class="contact-info-label" data-es="Teléfono">Phone</div>
+            <div class="contact-info-val"><a href="tel:+19296404388" data-track="click_phone">+1 929 640 4388</a></div>
           </div>
         </div>
-        <a href="https://wa.me/525532701276?text=Hi%20Envision%2C%20I%27m%20interested%20in%20starting%20a%20project%20with%20you.%20Could%20we%20schedule%20a%20call%3F" target="_blank" class="wa-btn">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-          <span data-en="Chat on WhatsApp" data-es="Chatear en WhatsApp">Chat on WhatsApp</span>
+        <a href="https://wa.me/525532701276?text=Hi%20Envision%2C%20I%27m%20interested%20in%20starting%20a%20project%20with%20you.%20Could%20we%20schedule%20a%20call%3F" data-es-href="https://wa.me/525532701276?text=Hola%20Envision%2C%20me%20interesa%20iniciar%20un%20proyecto%20con%20ustedes.%20%C2%BFPodemos%20agendar%20una%20llamada%3F" target="_blank" rel="noopener" class="wa-btn" data-track="click_whatsapp">
+          <svg width="18" height="18" class="ico"><use href="#i-wa"/></svg>
+          <span data-es="Chatear por WhatsApp">Chat on WhatsApp</span>
         </a>
       </div>
 
-      <!-- CONTACT FORM -->
+      <!-- CONTACT FORM — set CONFIG.formEndpoint in the script at the bottom of the page to activate -->
       <div class="contact-form fade-up">
-        <!--
-          TO ACTIVATE THIS FORM:
-          1. Go to https://formspree.io and create a free account
-          2. Create a new form and copy your form endpoint
-          3. Replace "YOUR_FORMSPREE_ID" below with your actual form ID
-          OR use Netlify Forms, EmailJS, or your own backend.
-        -->
-        <form id="contactForm" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" onsubmit="handleSubmit(event)">
+        <form id="contactForm" novalidate>
           <div class="form-grid">
             <div class="form-group">
-              <label for="name" data-en="Full Name *" data-es="Nombre Completo *">Full Name *</label>
-              <input type="text" id="name" name="name" required placeholder="John Smith">
+              <label for="name" data-es="Nombre Completo *">Full Name *</label>
+              <input type="text" id="name" name="name" required autocomplete="name" placeholder="John Smith" data-es-placeholder="Juan Pérez">
             </div>
             <div class="form-group">
-              <label for="email" data-en="Email Address *" data-es="Correo Electrónico *">Email Address *</label>
-              <input type="email" id="email" name="email" required placeholder="john@company.com">
+              <label for="email" data-es="Correo Electrónico *">Email Address *</label>
+              <input type="email" id="email" name="email" required autocomplete="email" placeholder="john@company.com" data-es-placeholder="juan@empresa.com">
             </div>
             <div class="form-group">
-              <label for="company" data-en="Company" data-es="Empresa">Company</label>
-              <input type="text" id="company" name="company" placeholder="Acme Inc.">
+              <label for="company" data-es="Empresa">Company</label>
+              <input type="text" id="company" name="company" autocomplete="organization" placeholder="Acme Inc." data-es-placeholder="Empresa S.A. de C.V.">
             </div>
             <div class="form-group">
-              <label for="service" data-en="Service Needed" data-es="Servicio Requerido">Service Needed</label>
+              <label for="service" data-es="Servicio Requerido">Service Needed</label>
               <select id="service" name="service">
-                <option value="" data-en="Select a service..." data-es="Selecciona un servicio...">Select a service...</option>
-                <option value="web" data-en="Web Design &amp; Development" data-es="Diseño y Desarrollo Web">Web Design &amp; Development</option>
-                <option value="mobile" data-en="Mobile Application" data-es="Aplicación Móvil">Mobile Application</option>
-                <option value="saas" data-en="SaaS / Web App" data-es="SaaS / App Web">SaaS / Web App</option>
-                <option value="ecommerce" data-en="E-Commerce" data-es="Comercio Electrónico">E-Commerce</option>
-                <option value="other" data-en="Other" data-es="Otro">Other</option>
+                <option value="" data-es="Selecciona un servicio...">Select a service...</option>
+                <option value="ai" data-es="IA e Integraciones">AI Features &amp; Integrations</option>
+                <option value="web" data-es="Diseño y Desarrollo Web">Web Design &amp; Development</option>
+                <option value="mobile" data-es="Aplicación Móvil">Mobile Application</option>
+                <option value="saas" data-es="SaaS / App Web">SaaS / Web App</option>
+                <option value="ecommerce" data-es="Comercio Electrónico">E-Commerce</option>
+                <option value="other" data-es="Otro">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="budget" data-es="Presupuesto Estimado">Estimated Budget</label>
+              <select id="budget" name="budget">
+                <option value="" data-es="Selecciona un rango...">Select a range...</option>
+                <option value="under-5k" data-es="Menos de $5,000 USD">Under $5,000</option>
+                <option value="5-15k">$5,000 – $15,000</option>
+                <option value="15-50k">$15,000 – $50,000</option>
+                <option value="50k+" data-es="Más de $50,000 USD">$50,000+</option>
+                <option value="unsure" data-es="Aún no lo sé">Not sure yet</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="timeline" data-es="¿Cuándo quieres empezar?">When do you want to start?</label>
+              <select id="timeline" name="timeline">
+                <option value="" data-es="Selecciona...">Select...</option>
+                <option value="asap" data-es="Lo antes posible">As soon as possible</option>
+                <option value="1-3m" data-es="En 1–3 meses">In 1–3 months</option>
+                <option value="3-6m" data-es="En 3–6 meses">In 3–6 months</option>
+                <option value="exploring" data-es="Solo estoy explorando">Just exploring</option>
               </select>
             </div>
             <div class="form-group full">
-              <label for="message" data-en="Tell us about your project *" data-es="Cuéntanos sobre tu proyecto *">Tell us about your project *</label>
-              <textarea id="message" name="message" required placeholder="Describe your project, goals, timeline, and any other relevant details..."></textarea>
+              <label for="message" data-es="Cuéntanos sobre tu proyecto *">Tell us about your project *</label>
+              <textarea id="message" name="message" required placeholder="Describe your project, goals, timeline, and any other relevant details..." data-es-placeholder="Describe tu proyecto, objetivos, plazos y cualquier otro detalle relevante..."></textarea>
             </div>
           </div>
-          <button type="submit" class="form-submit" data-en="Send Message →" data-es="Enviar Mensaje →">Send Message →</button>
+          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
+          <button type="submit" class="form-submit" id="formSubmit" data-es="Enviar Mensaje →">Send Message →</button>
+          <p class="form-note" data-es="Respondemos en menos de 24 horas. Tu información nunca se comparte.">We reply within 24 hours. Your details are never shared.</p>
+          <div class="form-error" id="formError" role="alert"></div>
         </form>
-        <div class="form-success" id="formSuccess">
-          <div class="check">✅</div>
-          <h3 data-en="Message Sent!" data-es="¡Mensaje Enviado!">Message Sent!</h3>
-          <p data-en="Thanks for reaching out. We'll get back to you within 24 hours." data-es="Gracias por contactarnos. Te responderemos en 24 horas.">Thanks for reaching out. We'll get back to you within 24 hours.</p>
+        <div class="form-success" id="formSuccess" role="status">
+          <div class="check"><svg class="ico"><use href="#i-check-circle"/></svg></div>
+          <h3 id="formSuccessTitle" data-es="¡Mensaje Enviado!">Message Sent!</h3>
+          <p id="formSuccessText" data-es="Gracias por contactarnos. Te responderemos en menos de 24 horas.">Thanks for reaching out. We'll get back to you within 24 hours.</p>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════ FAQ -->
+<section id="faq" class="section">
+  <div class="container">
+    <div class="fade-up" style="text-align:center;">
+      <p class="section-label" style="justify-content:center" data-es="Preguntas Frecuentes">FAQ</p>
+      <h2 class="section-title" data-es="Preguntas que <span class='grad-text'>Nos Hacen Seguido</span>">Questions We <span class="grad-text">Get Asked a Lot</span></h2>
+    </div>
+    <div class="faq-list">
+      <details class="faq-item fade-up">
+        <summary data-es="¿Cuánto cuesta un proyecto?">How much does a project cost?</summary>
+        <p data-es="Depende del alcance. Después de una llamada gratuita de 30 minutos te enviamos una propuesta a precio fijo con alcance, tiempos y entregables claros — sin sorpresas.">It depends on scope. After a free 30-minute call we send you a fixed-price proposal with a clear scope, timeline and milestones — no surprises.</p>
+      </details>
+      <details class="faq-item fade-up">
+        <summary data-es="¿Cuánto tiempo toma?">How long does it take?</summary>
+        <p data-es="Las landing pages y sitios web suelen tomar de 2 a 4 semanas. Un MVP web o móvil normalmente toma de 8 a 12 semanas. Las plataformas más grandes las planeamos por fases para que lances pronto y sigas creciendo.">Landing pages and marketing sites usually take 2–4 weeks. A web or mobile MVP typically takes 8–12 weeks. Larger platforms are planned in phases so you can launch early and keep building.</p>
+      </details>
+      <details class="faq-item fade-up">
+        <summary data-es="¿De quién es el código?">Who owns the code?</summary>
+        <p data-es="Tuyo. El 100% del código, los diseños y las cuentas (repositorios, hosting, App Store) te pertenecen desde el primer día. Si lo necesitas, también podemos firmar un acuerdo de confidencialidad (NDA).">You do. 100% of the code, designs and accounts (repositories, hosting, App Store) belong to you from day one. If you need one, we can also sign an NDA.</p>
+      </details>
+      <details class="faq-item fade-up">
+        <summary data-es="¿Cómo nos comunicamos? ¿Y la zona horaria?">How do we communicate, and what about time zones?</summary>
+        <p data-es="Tenemos presencia en Nueva York y Ciudad de México y trabajamos con clientes en cualquier parte del mundo. Acordamos horarios de reunión que funcionen en tu zona horaria — y si estás en EE.UU. o México, trabajamos en tu mismo horario. Tendrás un project manager dedicado, demos frecuentes del avance y un canal directo con el equipo, en español o inglés.">We have a presence in New York and Mexico City and work with clients anywhere in the world. We set meeting times that work in your time zone — and if you're in the US or Mexico, we work your hours. You get a dedicated project manager, regular progress demos and a direct channel to the team — in English or Spanish.</p>
+      </details>
+      <details class="faq-item fade-up">
+        <summary data-es="¿Qué pasa después del lanzamiento?">What happens after launch?</summary>
+        <p data-es="Seguimos contigo. Ofrecemos soporte continuo (monitoreo, correcciones, actualizaciones y nuevas funcionalidades) a través de un plan de mantenimiento mensual, ajustado a lo que tu producto necesita.">We stay with you. Ongoing support (monitoring, fixes, updates and new features) is available through a monthly maintenance plan, sized to what your product needs.</p>
+      </details>
+      <details class="faq-item fade-up">
+        <summary data-es="¿Pueden agregar IA a mi producto actual?">Can you add AI to my existing product?</summary>
+        <p data-es="Sí. Integramos IA en productos y herramientas existentes — asistentes, búsqueda inteligente, extracción de datos y automatización — empezando por el caso de uso con mayor retorno.">Yes. We integrate AI into existing products and internal tools — assistants, smart search, data extraction and automation — starting with the use case that pays off fastest.</p>
+      </details>
     </div>
   </div>
 </section>
@@ -1223,92 +1679,118 @@ footer {
         <a href="#" class="nav-logo">
           <img src="assets/envision-logo.png" alt="Envision" class="logo-img" width="433" height="66">
         </a>
-        <p class="footer-tagline" data-en="Premium digital products for ambitious brands in New York / Mexico City." data-es="Productos digitales premium para marcas en Nueva York / Ciudad de México.">Premium digital products for ambitious brands in New York / Mexico City.</p>
+        <p class="footer-tagline" data-es="Productos digitales premium para marcas ambiciosas en todo el mundo — desde Ciudad de México y Nueva York.">Premium digital products for ambitious brands anywhere — from New York and Mexico City.</p>
         <p class="footer-tagline" style="margin-top:8px;font-size:0.78rem">Envision XC, S.A. de C.V.</p>
       </div>
       <div class="footer-col">
-        <h4 data-en="Services" data-es="Servicios">Services</h4>
+        <h4 data-es="Servicios">Services</h4>
         <ul>
-          <li><a href="#services" data-en="Web Development" data-es="Desarrollo Web">Web Development</a></li>
-          <li><a href="#services" data-en="Mobile Apps" data-es="Apps Móviles">Mobile Apps</a></li>
-          <li><a href="#services" data-en="SaaS &amp; Web Apps" data-es="SaaS y Apps Web">SaaS &amp; Web Apps</a></li>
-          <li><a href="#services" data-en="E-Commerce" data-es="E-Commerce">E-Commerce</a></li>
+          <li><a href="#services" data-es="IA e Integraciones">AI &amp; Integrations</a></li>
+          <li><a href="#services" data-es="Desarrollo Web">Web Development</a></li>
+          <li><a href="#services" data-es="Apps Móviles">Mobile Apps</a></li>
+          <li><a href="#services" data-es="SaaS y Apps Web">SaaS &amp; Web Apps</a></li>
+          <li><a href="#services">E-Commerce</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h4 data-en="Company" data-es="Empresa">Company</h4>
+        <h4 data-es="Empresa">Company</h4>
         <ul>
-          <li><a href="#team" data-en="Team" data-es="Equipo">Team</a></li>
-          <li><a href="#process" data-en="Process" data-es="Proceso">Process</a></li>
-          <li><a href="#portfolio" data-en="Portfolio" data-es="Portafolio">Portfolio</a></li>
-          <li><a href="#contact" data-en="Contact" data-es="Contacto">Contact</a></li>
+          <li><a href="#case-studies" data-es="Casos de Éxito">Case Studies</a></li>
+          <li><a href="#team" data-es="Equipo">Team</a></li>
+          <li><a href="#process" data-es="Proceso">Process</a></li>
+          <li><a href="#faq" data-es="Preguntas Frecuentes">FAQ</a></li>
+          <li><a href="#contact" data-es="Contacto">Contact</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h4 data-en="Work" data-es="Proyectos">Work</h4>
+        <h4 data-es="Proyectos">Work</h4>
         <ul>
-          <li><a href="https://matchball.io" target="_blank">Matchball</a></li>
-          <li><a href="https://sublitool.com" target="_blank">Sublitool</a></li>
-          <li><a href="https://tendjournal.app" target="_blank">Tend Journal</a></li>
-          <li><a href="https://unna.gifts/en" target="_blank">Unna</a></li>
+          <li><a href="https://sublitool.com" target="_blank" rel="noopener">Sublitool</a></li>
+          <li><a href="https://unna.gifts/en" target="_blank" rel="noopener">Unna</a></li>
+          <li><a href="https://tendjournal.app" target="_blank" rel="noopener">Tend Journal</a></li>
+          <li><a href="https://matchball.io" target="_blank" rel="noopener">Matchball</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <p class="footer-copy">© 2025 Envision XC, S.A. de C.V. <span data-en="All rights reserved." data-es="Todos los derechos reservados.">All rights reserved.</span></p>
+      <p class="footer-copy">© <span id="year">2026</span> Envision XC, S.A. de C.V. <span data-es="Todos los derechos reservados.">All rights reserved.</span></p>
       <div class="footer-socials">
-        <a href="https://www.instagram.com/matchball.io/" target="_blank" class="footer-social" title="Instagram">ig</a>
-        <a href="mailto:info@matchball.io" class="footer-social" title="Email">@</a>
-        <a href="https://wa.me/525532701276?text=Hi%20Envision%2C%20I%27m%20interested%20in%20starting%20a%20project%20with%20you.%20Could%20we%20schedule%20a%20call%3F" target="_blank" class="footer-social" title="WhatsApp">wa</a>
+        <a href="mailto:info@matchball.io" class="footer-social" title="Email" aria-label="Email" data-track="click_email"><svg class="ico" style="width:16px;height:16px"><use href="#i-mail"/></svg></a>
+        <a href="https://wa.me/525532701276?text=Hi%20Envision%2C%20I%27m%20interested%20in%20starting%20a%20project%20with%20you.%20Could%20we%20schedule%20a%20call%3F" data-es-href="https://wa.me/525532701276?text=Hola%20Envision%2C%20me%20interesa%20iniciar%20un%20proyecto%20con%20ustedes.%20%C2%BFPodemos%20agendar%20una%20llamada%3F" target="_blank" rel="noopener" class="footer-social" title="WhatsApp" aria-label="WhatsApp" data-track="click_whatsapp"><svg class="ico" style="width:16px;height:16px"><use href="#i-wa"/></svg></a>
       </div>
     </div>
   </div>
 </footer>
 
+<!-- Floating CTAs -->
+<a href="https://wa.me/525532701276?text=Hi%20Envision%2C%20I%27m%20interested%20in%20starting%20a%20project%20with%20you.%20Could%20we%20schedule%20a%20call%3F" data-es-href="https://wa.me/525532701276?text=Hola%20Envision%2C%20me%20interesa%20iniciar%20un%20proyecto%20con%20ustedes.%20%C2%BFPodemos%20agendar%20una%20llamada%3F" target="_blank" rel="noopener" class="wa-float" aria-label="Chat on WhatsApp" data-es-aria-label="Chatear por WhatsApp" data-track="click_whatsapp">
+  <svg width="28" height="28" class="ico"><use href="#i-wa"/></svg>
+</a>
+<div class="sticky-cta" id="stickyCta">
+  <a href="#book" class="btn-primary" data-track="cta_book" data-es="Agenda una Llamada Gratis">Book a Free Call</a>
+  <a href="https://wa.me/525532701276?text=Hi%20Envision%2C%20I%27m%20interested%20in%20starting%20a%20project%20with%20you.%20Could%20we%20schedule%20a%20call%3F" data-es-href="https://wa.me/525532701276?text=Hola%20Envision%2C%20me%20interesa%20iniciar%20un%20proyecto%20con%20ustedes.%20%C2%BFPodemos%20agendar%20una%20llamada%3F" target="_blank" rel="noopener" class="sticky-wa" aria-label="WhatsApp" data-track="click_whatsapp">
+    <svg width="22" height="22" class="ico"><use href="#i-wa"/></svg>
+  </a>
+</div>
+
 <!-- ═══════════════════════════════════════════════════════ JS -->
 <script>
-/* ── LANGUAGE SWITCHER ───────────────────────────────────────── */
-let currentLang = localStorage.getItem('envision-lang') || 'en';
+/* ── CONFIG ──────────────────────────────────────────────────── */
+// formEndpoint: your Formspree URL, e.g. 'https://formspree.io/f/abcd1234'.
+//   Until it's set, the form opens the visitor's email app with the message pre-filled.
+// ga4Id: your Google Analytics 4 measurement ID, e.g. 'G-XXXXXXXXXX'. Leave empty to disable.
+const CONFIG = {
+  formEndpoint: '',
+  ga4Id: '',
+  contactEmail: 'info@matchball.io',
+};
 
-function applyLang(lang) {
-  currentLang = lang;
-  localStorage.setItem('envision-lang', lang);
-  document.documentElement.lang = lang;
+const LANG = document.documentElement.lang === 'es' ? 'es' : 'en';
+const T = {
+  en: {
+    sending: 'Sending…',
+    send: 'Send Message →',
+    required: 'Please fill in your name, a valid email and a short description of your project.',
+    failed: 'Something went wrong sending your message. Please email us at <a href="mailto:info@matchball.io">info@matchball.io</a> or message us on WhatsApp.',
+    mailTitle: 'Almost done!',
+    mailText: 'Your email app should have opened with your message ready — just press send. If it didn\'t, email us at info@matchball.io or message us on WhatsApp.',
+    subject: 'New project inquiry',
+  },
+  es: {
+    sending: 'Enviando…',
+    send: 'Enviar Mensaje →',
+    required: 'Por favor escribe tu nombre, un correo válido y una breve descripción de tu proyecto.',
+    failed: 'Algo salió mal al enviar tu mensaje. Escríbenos a <a href="mailto:info@matchball.io">info@matchball.io</a> o por WhatsApp.',
+    mailTitle: '¡Casi listo!',
+    mailText: 'Tu app de correo debió abrirse con tu mensaje listo — solo presiona enviar. Si no se abrió, escríbenos a info@matchball.io o por WhatsApp.',
+    subject: 'Nueva solicitud de proyecto',
+  },
+}[LANG];
 
-  document.querySelectorAll('[data-en]').forEach(el => {
-    const text = el.getAttribute('data-' + lang);
-    if (!text) return;
-    // If it contains HTML tags, use innerHTML
-    if (text.includes('<')) {
-      el.innerHTML = text;
-    } else {
-      el.textContent = text;
-    }
-  });
-
-  // Update select options
-  document.querySelectorAll('select option[data-en]').forEach(opt => {
-    const text = opt.getAttribute('data-' + lang);
-    if (text) opt.textContent = text;
-  });
-
-  // Update placeholder attributes
-  document.querySelectorAll('textarea').forEach(el => {
-    if (lang === 'es') {
-      el.placeholder = 'Describe tu proyecto, objetivos, plazos y cualquier otro detalle relevante...';
-    } else {
-      el.placeholder = 'Describe your project, goals, timeline, and any other relevant details...';
-    }
-  });
-
-  // Toggle button label
-  const btn = document.getElementById('langToggle');
-  btn.textContent = lang === 'en' ? 'ES' : 'EN';
+/* ── ANALYTICS ───────────────────────────────────────────────── */
+window.dataLayer = window.dataLayer || [];
+function gtag() { dataLayer.push(arguments); }
+if (CONFIG.ga4Id) {
+  const s = document.createElement('script');
+  s.async = true;
+  s.src = 'https://www.googletagmanager.com/gtag/js?id=' + CONFIG.ga4Id;
+  document.head.appendChild(s);
+  gtag('js', new Date());
+  gtag('config', CONFIG.ga4Id);
 }
-
-function toggleLang() {
-  applyLang(currentLang === 'en' ? 'es' : 'en');
+function track(name, params) {
+  gtag('event', name, Object.assign({ language: LANG }, params || {}));
 }
+document.addEventListener('click', (e) => {
+  const el = e.target.closest('[data-track]');
+  if (el) track(el.dataset.track, { location: el.closest('section, nav, footer, .sticky-cta, .mobile-menu')?.id || el.className });
+});
+// Calendly posts a message when someone books
+window.addEventListener('message', (e) => {
+  if (e.origin === 'https://calendly.com' && e.data && e.data.event === 'calendly.event_scheduled') {
+    track('book_call', { method: 'calendly' });
+  }
+});
 
 /* ── NAV SCROLL ──────────────────────────────────────────────── */
 const navbar = document.getElementById('navbar');
@@ -1321,6 +1803,7 @@ let menuOpen = false;
 function toggleMenu() {
   menuOpen = !menuOpen;
   document.getElementById('mobileMenu').classList.toggle('open', menuOpen);
+  document.getElementById('hamburger').setAttribute('aria-expanded', menuOpen);
   const spans = document.querySelectorAll('.hamburger span');
   if (menuOpen) {
     spans[0].style.cssText = 'transform:translateY(7px) rotate(45deg)';
@@ -1340,7 +1823,7 @@ const observer = new IntersectionObserver((entries) => {
     if (entry.isIntersecting) {
       entry.target.classList.add('visible');
       // Stagger children in grids
-      const parent = entry.target.closest('.services-grid, .portfolio-grid, .team-grid, .testimonials-grid, .process-grid, .stats-grid');
+      const parent = entry.target.closest('.services-grid, .portfolio-grid, .team-grid, .process-grid, .stats-grid, .faq-list, .guarantees');
       if (parent) {
         const siblings = parent.querySelectorAll('.fade-up');
         siblings.forEach((el, i) => {
@@ -1353,37 +1836,100 @@ const observer = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 
-/* ── FORM SUBMISSION ─────────────────────────────────────────── */
-function handleSubmit(e) {
-  const form = document.getElementById('contactForm');
-  const action = form.getAttribute('action');
+/* ── STICKY MOBILE CTA ───────────────────────────────────────── */
+// Shown once the hero is out of view, hidden while the booking or contact section is on screen
+const stickyCta = document.getElementById('stickyCta');
+const waFloat = document.querySelector('.wa-float');
+const ctaState = { hero: true, book: false, contact: false };
+const ctaObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => { ctaState[entry.target.id] = entry.isIntersecting; });
+  const show = !ctaState.hero && !ctaState.book && !ctaState.contact;
+  stickyCta.classList.toggle('show', show);
+  waFloat.style.opacity = (ctaState.book || ctaState.contact) ? '0' : '1';
+  waFloat.style.pointerEvents = (ctaState.book || ctaState.contact) ? 'none' : 'auto';
+}, { threshold: 0 });
+['hero', 'book', 'contact'].forEach(id => ctaObserver.observe(document.getElementById(id)));
 
-  // If Formspree ID not set, show placeholder message
-  if (action.includes('YOUR_FORMSPREE_ID')) {
-    e.preventDefault();
-    form.style.display = 'none';
-    document.getElementById('formSuccess').style.display = 'block';
-    return;
+/* ── CALENDLY (lazy) ─────────────────────────────────────────── */
+const calendlyObserver = new IntersectionObserver((entries) => {
+  if (entries.some(e => e.isIntersecting)) {
+    const s = document.createElement('script');
+    s.src = 'https://assets.calendly.com/assets/external/widget.js';
+    s.async = true;
+    document.body.appendChild(s);
+    calendlyObserver.disconnect();
   }
-  // Otherwise let Formspree handle it via fetch
-  e.preventDefault();
-  const data = new FormData(form);
-  fetch(action, { method: 'POST', body: data, headers: { 'Accept': 'application/json' } })
-    .then(r => {
-      if (r.ok) {
-        form.style.display = 'none';
-        document.getElementById('formSuccess').style.display = 'block';
-      }
-    })
-    .catch(() => {
-      alert(currentLang === 'en'
-        ? 'Something went wrong. Please email us directly at info@matchball.io'
-        : 'Algo salió mal. Por favor escríbenos a info@matchball.io');
-    });
+}, { rootMargin: '600px 0px' });
+calendlyObserver.observe(document.getElementById('calendlyWidget'));
+
+/* ── FORM SUBMISSION ─────────────────────────────────────────── */
+const form = document.getElementById('contactForm');
+const formError = document.getElementById('formError');
+const submitBtn = document.getElementById('formSubmit');
+
+function showSuccess(title, text) {
+  if (title) document.getElementById('formSuccessTitle').textContent = title;
+  if (text) document.getElementById('formSuccessText').textContent = text;
+  form.style.display = 'none';
+  document.getElementById('formSuccess').style.display = 'block';
+}
+function showError(html) {
+  formError.innerHTML = html;
+  formError.style.display = 'block';
 }
 
-/* ── INIT ────────────────────────────────────────────────────── */
-applyLang(currentLang);
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  formError.style.display = 'none';
+  if (!form.checkValidity()) {
+    showError(T.required);
+    form.querySelector(':invalid')?.focus();
+    return;
+  }
+  const data = new FormData(form);
+  const label = (id) => {
+    const sel = document.getElementById(id);
+    return sel.value ? sel.options[sel.selectedIndex].text : '';
+  };
+
+  // No backend configured yet: hand the message to the visitor's email app so the lead isn't lost
+  if (!CONFIG.formEndpoint) {
+    const body = [
+      data.get('message'),
+      '',
+      '—',
+      'Name: ' + data.get('name'),
+      'Email: ' + data.get('email'),
+      data.get('company') ? 'Company: ' + data.get('company') : '',
+      label('service') ? 'Service: ' + label('service') : '',
+      label('budget') ? 'Budget: ' + label('budget') : '',
+      label('timeline') ? 'Start: ' + label('timeline') : '',
+    ].filter(Boolean).join('\n');
+    window.location.href = 'mailto:' + CONFIG.contactEmail +
+      '?subject=' + encodeURIComponent(T.subject + ' — ' + data.get('name')) +
+      '&body=' + encodeURIComponent(body);
+    track('generate_lead', { method: 'mailto', service: data.get('service'), budget: data.get('budget') });
+    showSuccess(T.mailTitle, T.mailText);
+    return;
+  }
+
+  submitBtn.disabled = true;
+  submitBtn.textContent = T.sending;
+  fetch(CONFIG.formEndpoint, { method: 'POST', body: data, headers: { 'Accept': 'application/json' } })
+    .then(r => {
+      if (!r.ok) throw new Error('HTTP ' + r.status);
+      track('generate_lead', { method: 'form', service: data.get('service'), budget: data.get('budget') });
+      showSuccess();
+    })
+    .catch(() => {
+      submitBtn.disabled = false;
+      submitBtn.textContent = T.send;
+      showError(T.failed);
+    });
+});
+
+/* ── FOOTER YEAR ─────────────────────────────────────────────── */
+document.getElementById('year').textContent = new Date().getFullYear();
 </script>
 </body>
 </html>
