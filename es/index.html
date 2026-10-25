@@ -743,9 +743,24 @@ footer {
   letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted);
   margin-bottom: 22px;
 }
+/* Infinite logo carousel: the row is rendered twice and the track slides by exactly one copy */
+.clients-marquee {
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
+}
+.clients-track { display: flex; width: max-content; animation: marquee 38s linear infinite; }
+.clients-marquee:hover .clients-track { animation-play-state: paused; }
 .clients-row {
-  display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
-  gap: 14px 44px;
+  display: flex; align-items: center; flex-shrink: 0;
+  gap: 64px; padding-right: 64px;
+}
+@keyframes marquee { to { transform: translateX(-50%); } }
+@media (prefers-reduced-motion: reduce) {
+  .clients-marquee { -webkit-mask-image: none; mask-image: none; }
+  .clients-track { animation: none; width: auto; justify-content: center; }
+  .clients-row { flex-wrap: wrap; justify-content: center; gap: 14px 44px; padding-right: 0; }
+  .clients-row[aria-hidden] { display: none; }
 }
 .client-mark {
   font-size: 1.15rem; font-weight: 800; letter-spacing: -0.02em;
@@ -929,7 +944,8 @@ select {
   .sticky-cta { display: flex; }
   footer { padding-bottom: 96px; }
   .service-badge { position: static; display: inline-block; margin-bottom: 14px; }
-  .clients-row { gap: 12px 28px; }
+  .clients-row { gap: 44px; padding-right: 44px; }
+  .clients-track { animation-duration: 28s; }
   .client-mark { font-size: 1rem; }
   .client-mark img { transform: scale(0.85); }
 }
@@ -1039,15 +1055,29 @@ select {
 <section id="clients" aria-label="Clients">
   <div class="container">
     <p class="clients-label">Productos que hemos ayudado a lanzar</p>
-    <div class="clients-row">
-      <a href="#portfolio" class="client-mark logo"><img src="../assets/logos/sublitool.svg" alt="Sublitool" height="30" style="height:30px"></a>
-      <a href="#portfolio" class="client-mark logo"><img src="../assets/logos/unna.png" alt="Unna" height="26" style="height:26px"></a>
-      <a href="#case-studies" class="client-mark caps">OnSpot</a>
-      <a href="#case-studies" class="client-mark logo"><img src="../assets/logos/matchball.svg" alt="Matchball" height="15" style="height:15px"></a>
-      <a href="#portfolio" class="client-mark serif">tend</a>
-      <a href="#case-studies" class="client-mark logo"><img src="../assets/logos/arqax.png" alt="Arqax" height="20" style="height:20px"></a>
-      <a href="#case-studies" class="client-mark logo"><img src="../assets/logos/iago.svg" alt="Iago Design" height="40" style="height:40px"></a>
-      <a href="#portfolio" class="client-mark">e*stars</a>
+    <div class="clients-marquee">
+      <div class="clients-track">
+        <div class="clients-row">
+          <a href="#portfolio" class="client-mark logo"><img src="../assets/logos/sublitool.svg" alt="Sublitool" height="30" style="height:30px"></a>
+          <a href="#portfolio" class="client-mark logo"><img src="../assets/logos/unna.png" alt="Unna" height="26" style="height:26px"></a>
+          <a href="#case-studies" class="client-mark caps">OnSpot</a>
+          <a href="#case-studies" class="client-mark logo"><img src="../assets/logos/matchball.svg" alt="Matchball" height="15" style="height:15px"></a>
+          <a href="#portfolio" class="client-mark serif">tend</a>
+          <a href="#case-studies" class="client-mark logo"><img src="../assets/logos/arqax.png" alt="Arqax" height="20" style="height:20px"></a>
+          <a href="#case-studies" class="client-mark logo"><img src="../assets/logos/iago.svg" alt="Iago Design" height="40" style="height:40px"></a>
+          <a href="#portfolio" class="client-mark">e*stars</a>
+        </div>
+        <div class="clients-row" aria-hidden="true">
+          <a tabindex="-1" href="#portfolio" class="client-mark logo"><img src="../assets/logos/sublitool.svg" alt="" height="30" style="height:30px"></a>
+          <a tabindex="-1" href="#portfolio" class="client-mark logo"><img src="../assets/logos/unna.png" alt="" height="26" style="height:26px"></a>
+          <a tabindex="-1" href="#case-studies" class="client-mark caps">OnSpot</a>
+          <a tabindex="-1" href="#case-studies" class="client-mark logo"><img src="../assets/logos/matchball.svg" alt="" height="15" style="height:15px"></a>
+          <a tabindex="-1" href="#portfolio" class="client-mark serif">tend</a>
+          <a tabindex="-1" href="#case-studies" class="client-mark logo"><img src="../assets/logos/arqax.png" alt="" height="20" style="height:20px"></a>
+          <a tabindex="-1" href="#case-studies" class="client-mark logo"><img src="../assets/logos/iago.svg" alt="" height="40" style="height:40px"></a>
+          <a tabindex="-1" href="#portfolio" class="client-mark">e*stars</a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
