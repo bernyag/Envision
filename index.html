@@ -1562,7 +1562,7 @@ select {
         </a>
       </div>
 
-      <!-- CONTACT FORM — set CONFIG.formEndpoint in the script at the bottom of the page to activate -->
+      <!-- CONTACT FORM — submits to Formspree via CONFIG.formEndpoint in the script at the bottom of the page -->
       <div class="contact-form fade-up">
         <form id="contactForm" novalidate>
           <div class="form-grid">
@@ -1736,7 +1736,7 @@ select {
 //   Until it's set, the form opens the visitor's email app with the message pre-filled.
 // ga4Id: your Google Analytics 4 measurement ID, e.g. 'G-XXXXXXXXXX'. Leave empty to disable.
 const CONFIG = {
-  formEndpoint: '',
+  formEndpoint: 'https://formspree.io/f/mppppklp',
   ga4Id: '',
   contactEmail: 'info@matchball.io',
 };
@@ -1908,6 +1908,10 @@ form.addEventListener('submit', (e) => {
     showSuccess(T.mailTitle, T.mailText);
     return;
   }
+
+  // Formspree uses _subject as the email subject line
+  data.append('_subject', T.subject + ' - ' + data.get('name'));
+  data.append('language', LANG);
 
   submitBtn.disabled = true;
   submitBtn.textContent = T.sending;

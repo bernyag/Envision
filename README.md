@@ -20,7 +20,7 @@ python3 scripts/build_es.py
 
 At the top of the `<script>` block at the bottom of `index.html`:
 
-- `CONFIG.formEndpoint`: Formspree endpoint (e.g. `https://formspree.io/f/abcd1234`). Until set, the contact form opens the visitor's email app with the message pre-filled.
+- `CONFIG.formEndpoint`: Formspree endpoint (currently `https://formspree.io/f/mppppklp`). If emptied, the contact form falls back to opening the visitor's email app with the message pre-filled.
 - `CONFIG.ga4Id`: Google Analytics 4 measurement ID (`G-XXXXXXXXXX`). Tracked events: `generate_lead`, `book_call` (Calendly booking), `cta_book`, `click_whatsapp`, `click_email`, `click_phone`.
 
 The site URL (`https://envision-one-alpha.vercel.app`) is used in the `<head>` tags, JSON-LD, `robots.txt` and `sitemap.xml`. Replace it everywhere when you move to a custom domain.
