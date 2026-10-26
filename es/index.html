@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Envision | Agencia de Desarrollo de Apps y SaaS – Ciudad de México y Nueva York</title>
+<title>Envision | Agencia de Desarrollo de Apps y SaaS en Ciudad de México y Nueva York</title>
 <meta name="description" content="Equipo senior de diseño e ingeniería con presencia en Nueva York y Ciudad de México que construye apps web, apps móviles, SaaS y productos con IA para empresas en cualquier parte del mundo.">
 <meta name="theme-color" content="#0A0A0F">
 <link rel="canonical" href="https://envision-one-alpha.vercel.app/es/">
@@ -17,7 +17,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Envision">
 <meta property="og:url" content="https://envision-one-alpha.vercel.app/es/">
-<meta property="og:title" content="Envision – Productos digitales de calidad internacional, hechos en México">
+<meta property="og:title" content="Envision | Productos digitales de calidad internacional, hechos en México">
 <meta property="og:description" content="Apps web, apps móviles, SaaS y productos con IA para empresas en cualquier parte del mundo. Con presencia en Ciudad de México y Nueva York.">
 <meta property="og:image" content="https://envision-one-alpha.vercel.app/assets/og-image.jpg">
 <meta property="og:image:width" content="1200">
@@ -249,10 +249,11 @@ nav.scrolled {
 /* ── HERO ───────────────────────────────────────────────────────────────── */
 #hero {
   min-height: 100vh;
-  display: flex; align-items: center;
+  display: flex; flex-direction: column; justify-content: center;
   position: relative; overflow: hidden;
-  padding-top: 72px;
+  padding: 104px 0 40px;
 }
+#hero > .container { width: 100%; }
 .hero-blob {
   position: absolute; border-radius: 50%;
   filter: blur(120px); pointer-events: none;
@@ -744,7 +745,7 @@ footer {
 .hero-checks .ico { width: 16px; height: 16px; color: var(--green); stroke-width: 2.5; }
 
 /* ── CLIENT STRIP ───────────────────────────────────────────────────────── */
-#clients { padding: 40px 0 8px; background: var(--bg); }
+#clients { position: relative; z-index: 1; width: 100%; margin-top: 64px; }
 .clients-label {
   text-align: center; font-size: 0.72rem; font-weight: 600;
   letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted);
@@ -1017,7 +1018,7 @@ select {
   <a href="#team" onclick="closeMenu()">Equipo</a>
   <a href="#faq" onclick="closeMenu()">Preguntas Frecuentes</a>
   <a href="../" hreflang="en">English version</a>
-  <a href="#book" class="btn-primary" onclick="closeMenu()" data-track="cta_book">Agenda una Llamada Gratis</a>
+  <a href="#book" class="btn-primary" onclick="closeMenu()" data-track="cta_book">Agenda una Llamada</a>
 </div>
 
 <!-- ═══════════════════════════════════════════════════════ HERO -->
@@ -1035,11 +1036,11 @@ select {
         <span>Productos Digitales de Calidad Internacional.</span>
         <span class="accent grad-text">Hechos en México.</span>
       </h1>
-      <p class="hero-sub">Diseñamos y construimos apps web, apps móviles, plataformas SaaS y productos con IA para empresas en cualquier parte del mundo — del MVP al lanzamiento en tan solo 12 semanas, con presencia en Ciudad de México y Nueva York.</p>
+      <p class="hero-sub">Diseñamos y construimos apps web, apps móviles, plataformas SaaS y productos con IA para empresas en cualquier parte del mundo. Del MVP al lanzamiento en tan solo 12 semanas, con presencia en Ciudad de México y Nueva York.</p>
       <div class="hero-ctas">
         <a href="#book" class="btn-hero" data-track="cta_book">
           <svg class="ico" style="width:16px;height:16px"><use href="#i-calendar"/></svg>
-          <span>Agenda una Llamada Gratis de 30 min</span>
+          <span>Agenda 30 min con Nosotros</span>
         </a>
         <a href="#portfolio" class="btn-outline">
           <span>Ver Nuestro Trabajo</span>
@@ -1053,36 +1054,31 @@ select {
       </div>
     </div>
   </div>
-  <div class="hero-scroll">
-    <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 5v14"/><path d="M19 12l-7 7-7-7"/></svg>
-  </div>
-</section>
-
-<!-- ═══════════════════════════════════════════════════════ CLIENTS -->
-<section id="clients" aria-label="Clients">
-  <div class="container">
-    <p class="clients-label">Productos que hemos ayudado a lanzar</p>
-    <div class="clients-marquee">
-      <div class="clients-track">
-        <div class="clients-row">
-          <a href="#portfolio" class="client-mark logo"><img src="../assets/logos/sublitool.svg" alt="Sublitool" height="30" style="height:30px"></a>
-          <a href="#portfolio" class="client-mark logo"><img src="../assets/logos/unna.png" alt="Unna" height="26" style="height:26px"></a>
-          <a href="#case-studies" class="client-mark caps">OnSpot</a>
-          <a href="#case-studies" class="client-mark logo"><img src="../assets/logos/matchball.svg" alt="Matchball" height="15" style="height:15px"></a>
-          <a href="#portfolio" class="client-mark serif">tend</a>
-          <a href="#case-studies" class="client-mark logo"><img src="../assets/logos/arqax.png" alt="Arqax" height="20" style="height:20px"></a>
-          <a href="#case-studies" class="client-mark logo"><img src="../assets/logos/iago.svg" alt="Iago Design" height="40" style="height:40px"></a>
-          <a href="#portfolio" class="client-mark">e*stars</a>
-        </div>
-        <div class="clients-row" aria-hidden="true">
-          <a tabindex="-1" href="#portfolio" class="client-mark logo"><img src="../assets/logos/sublitool.svg" alt="" height="30" style="height:30px"></a>
-          <a tabindex="-1" href="#portfolio" class="client-mark logo"><img src="../assets/logos/unna.png" alt="" height="26" style="height:26px"></a>
-          <a tabindex="-1" href="#case-studies" class="client-mark caps">OnSpot</a>
-          <a tabindex="-1" href="#case-studies" class="client-mark logo"><img src="../assets/logos/matchball.svg" alt="" height="15" style="height:15px"></a>
-          <a tabindex="-1" href="#portfolio" class="client-mark serif">tend</a>
-          <a tabindex="-1" href="#case-studies" class="client-mark logo"><img src="../assets/logos/arqax.png" alt="" height="20" style="height:20px"></a>
-          <a tabindex="-1" href="#case-studies" class="client-mark logo"><img src="../assets/logos/iago.svg" alt="" height="40" style="height:40px"></a>
-          <a tabindex="-1" href="#portfolio" class="client-mark">e*stars</a>
+  <div id="clients" aria-label="Clients">
+    <div class="container">
+      <p class="clients-label">Productos que hemos ayudado a lanzar</p>
+      <div class="clients-marquee">
+        <div class="clients-track">
+          <div class="clients-row">
+            <a href="#portfolio" class="client-mark logo"><img src="../assets/logos/sublitool.svg" alt="Sublitool" height="30" style="height:30px"></a>
+            <a href="#portfolio" class="client-mark logo"><img src="../assets/logos/unna.png" alt="Unna" height="26" style="height:26px"></a>
+            <a href="#case-studies" class="client-mark caps">OnSpot</a>
+            <a href="#case-studies" class="client-mark logo"><img src="../assets/logos/matchball.svg" alt="Matchball" height="15" style="height:15px"></a>
+            <a href="#portfolio" class="client-mark serif">tend</a>
+            <a href="#case-studies" class="client-mark logo"><img src="../assets/logos/arqax.png" alt="Arqax" height="20" style="height:20px"></a>
+            <a href="#case-studies" class="client-mark logo"><img src="../assets/logos/iago.svg" alt="Iago Design" height="40" style="height:40px"></a>
+            <a href="#portfolio" class="client-mark">e*stars</a>
+          </div>
+          <div class="clients-row" aria-hidden="true">
+            <a tabindex="-1" href="#portfolio" class="client-mark logo"><img src="../assets/logos/sublitool.svg" alt="" height="30" style="height:30px"></a>
+            <a tabindex="-1" href="#portfolio" class="client-mark logo"><img src="../assets/logos/unna.png" alt="" height="26" style="height:26px"></a>
+            <a tabindex="-1" href="#case-studies" class="client-mark caps">OnSpot</a>
+            <a tabindex="-1" href="#case-studies" class="client-mark logo"><img src="../assets/logos/matchball.svg" alt="" height="15" style="height:15px"></a>
+            <a tabindex="-1" href="#portfolio" class="client-mark serif">tend</a>
+            <a tabindex="-1" href="#case-studies" class="client-mark logo"><img src="../assets/logos/arqax.png" alt="" height="20" style="height:20px"></a>
+            <a tabindex="-1" href="#case-studies" class="client-mark logo"><img src="../assets/logos/iago.svg" alt="" height="40" style="height:40px"></a>
+            <a tabindex="-1" href="#portfolio" class="client-mark">e*stars</a>
+          </div>
         </div>
       </div>
     </div>
@@ -1126,7 +1122,7 @@ select {
         <span class="service-badge">Alta demanda</span>
         <div class="service-icon"><svg class="ico"><use href="#i-sparkles"/></svg></div>
         <div class="service-title">IA e Integraciones Inteligentes</div>
-        <div class="service-desc">IA que realmente aporta valor — asistentes conversacionales, extracción de datos y documentos, generación de contenido y automatización de procesos, integrados en tu producto o tus herramientas internas.</div>
+        <div class="service-desc">IA que realmente aporta valor: asistentes conversacionales, extracción de datos y documentos, generación de contenido y automatización de procesos, integrados en tu producto o tus herramientas internas.</div>
         <div class="service-proof">Ya en producción: <strong>Sublitool</strong> genera plantillas con IA y <strong>Tend</strong> usa IA para guiar a sus usuarios.</div>
         <div class="service-tags">
           <span class="service-tag">Integración de LLMs</span>
@@ -1160,7 +1156,7 @@ select {
       <div class="service-card fade-up" style="--accent: linear-gradient(90deg,#A855F7,#7C3AED)">
         <div class="service-icon"><svg class="ico"><use href="#i-dashboard"/></svg></div>
         <div class="service-title">SaaS y Aplicaciones Web</div>
-        <div class="service-desc">Aplicaciones web complejas y plataformas construidas desde cero — dashboards, CRMs, marketplaces y herramientas a medida.</div>
+        <div class="service-desc">Aplicaciones web complejas y plataformas construidas desde cero: dashboards, CRMs, marketplaces y herramientas a medida.</div>
         <div class="service-tags">
           <span class="service-tag">Node.js</span>
           <span class="service-tag">PostgreSQL</span>
@@ -1214,7 +1210,7 @@ select {
         <div class="project-body">
           <div class="project-cat">E-Commerce · Mesa de Regalos</div>
           <div class="project-name">Unna</div>
-          <div class="project-desc">Mesa de regalos curada donde los invitados financian los espacios reales del nuevo hogar de la pareja — sala, cocina, recámara — en lugar de elegir artículos de un catálogo.</div>
+          <div class="project-desc">Mesa de regalos curada donde los invitados financian los espacios reales del nuevo hogar de la pareja (sala, cocina, recámara) en lugar de elegir artículos de un catálogo.</div>
           <a href="https://unna.gifts/en" target="_blank" rel="noopener" class="project-link">
             <span>Ver Proyecto</span>
             <svg class="ico" style="width:14px;height:14px"><use href="#i-arrow"/></svg>
@@ -1255,7 +1251,7 @@ select {
         <div class="project-body">
           <div class="project-cat">Bienestar · App</div>
           <div class="project-name">Tend Journal</div>
-          <div class="project-desc">Diario de un minuto al día — registra tu estado de ánimo, logros y gratitud, y descubre patrones con reflexiones semanales y un radar de tus áreas de vida.</div>
+          <div class="project-desc">Diario de un minuto al día. Registra tu estado de ánimo, logros y gratitud, y descubre patrones con reflexiones semanales y un radar de tus áreas de vida.</div>
           <a href="https://tendjournal.app" target="_blank" rel="noopener" class="project-link">
             <span>Ver Proyecto</span>
             <svg class="ico" style="width:14px;height:14px"><use href="#i-arrow"/></svg>
@@ -1268,7 +1264,7 @@ select {
         <div class="project-body">
           <div class="project-cat">Arquitectura · Diseño Web</div>
           <div class="project-name">Arqax</div>
-          <div class="project-desc">Sitio web para un estudio de arquitectura, interiorismo, espacios comerciales y mobiliario de lujo — una presencia digital a la altura de su obra.</div>
+          <div class="project-desc">Sitio web para un estudio de arquitectura, interiorismo, espacios comerciales y mobiliario de lujo, con una presencia digital a la altura de su obra.</div>
           <div class="project-result"><svg class="ico"><use href="#i-check-circle"/></svg><span>Cliente recurrente</span></div>
           <a href="#contact" class="project-link">
             <span>Demo bajo solicitud</span>
@@ -1282,7 +1278,7 @@ select {
         <div class="project-body">
           <div class="project-cat">Branding · Diseño Web</div>
           <div class="project-name">Iago Design</div>
-          <div class="project-desc">Identidad de marca y portafolio digital para un estudio de diseño creativo — sistemas visuales, tipografía y presencia web.</div>
+          <div class="project-desc">Identidad de marca y portafolio digital para un estudio de diseño creativo: sistemas visuales, tipografía y presencia web.</div>
           <div class="project-result"><svg class="ico"><use href="#i-check-circle"/></svg><span>Cliente recurrente</span></div>
           <a href="#contact" class="project-link">
             <span>Demo bajo solicitud</span>
@@ -1328,7 +1324,7 @@ select {
     <div class="fade-up" style="text-align:center;">
       <p class="section-label" style="justify-content:center">Casos de Éxito</p>
       <h2 class="section-title">Lo Que Construimos y <span class='grad-text'>Lo Que Dicen</span></h2>
-      <p class="section-sub" style="margin:0 auto">El reto, lo que construimos y el resultado — contado por nuestros clientes.</p>
+      <p class="section-sub" style="margin:0 auto">El reto, lo que construimos y el resultado, contado por nuestros clientes.</p>
     </div>
     <div class="cases">
 
@@ -1338,7 +1334,7 @@ select {
           <div class="case-cat">Red Social · App iOS</div>
           <h3 class="case-title">OnSpot Social</h3>
           <dl class="case-rows">
-            <div class="case-row"><dt>Reto</dt><dd>Convertir la idea de un fundador — una red social basada en lugares — en una app de iPhone pulida y lista para el App Store.</dd></div>
+            <div class="case-row"><dt>Reto</dt><dd>Convertir la idea de un fundador, una red social basada en lugares, en una app de iPhone pulida y lista para el App Store.</dd></div>
             <div class="case-row"><dt>Construimos</dt><dd>Diseño de producto y desarrollo iOS: publicaciones con foto ligadas a lugares, un mapa en vivo de los spots de tus amigos y perfiles con seguidores.</dd></div>
             <div class="case-row result"><dt>Resultado</dt><dd>Disponible en el App Store.</dd></div>
           </dl>
@@ -1364,8 +1360,8 @@ select {
           <h3 class="case-title">Iago Design &amp; Arqax</h3>
           <dl class="case-rows">
             <div class="case-row"><dt>Reto</dt><dd>Un estudio creativo necesitaba una marca y una presencia web a la altura de la calidad de su trabajo.</dd></div>
-            <div class="case-row"><dt>Construimos</dt><dd>Identidad de marca, sistema visual y sitio web para Iago Design — y después, un segundo sitio para Arqax, el estudio de arquitectura e interiorismo del mismo fundador.</dd></div>
-            <div class="case-row result"><dt>Resultado</dt><dd>Cliente recurrente — dos marcas lanzadas.</dd></div>
+            <div class="case-row"><dt>Construimos</dt><dd>Identidad de marca, sistema visual y sitio web para Iago Design. Después, un segundo sitio para Arqax, el estudio de arquitectura e interiorismo del mismo fundador.</dd></div>
+            <div class="case-row result"><dt>Resultado</dt><dd>Cliente recurrente: dos marcas lanzadas.</dd></div>
           </dl>
           <blockquote class="case-quote">
             <p>“Ha sido un placer trabajar con el equipo de Envision. Se mueven rápido, justo lo que necesitamos, y han superado nuestras expectativas de forma consistente.”</p>
@@ -1391,7 +1387,7 @@ select {
             <div class="case-row"><dt>Construimos</dt><dd>Nuestro propio producto: apps iOS, Android y web diseñadas y construidas en paralelo por un solo equipo, con gestión de eventos y comunidades de jugadores.</dd></div>
             <div class="case-row result"><dt>Resultado</dt><dd>Lanzado en las tres plataformas en pocos meses.</dd></div>
           </dl>
-          <p class="section-sub" style="font-size:0.9rem">También construimos nuestros propios productos — sabemos lo que se necesita para lanzar, porque lo hacemos con nuestro propio dinero.</p>
+          <p class="section-sub" style="font-size:0.9rem">También construimos nuestros propios productos, así que sabemos lo que se necesita para lanzar, porque lo hacemos con nuestro propio dinero.</p>
           <a href="https://matchball.io" target="_blank" rel="noopener" class="case-link"><span>Visitar Matchball</span><svg class="ico" style="width:14px;height:14px"><use href="#i-arrow"/></svg></a>
         </div>
       </article>
@@ -1427,7 +1423,7 @@ select {
       <div class="process-step fade-up">
         <div class="step-num">04</div>
         <div class="step-title">Lanzamiento y Soporte</div>
-        <div class="step-desc">Desplegamos, monitoreamos e iteramos contigo después del lanzamiento — para que tu producto crezca y se mantenga a la vanguardia.</div>
+        <div class="step-desc">Desplegamos, monitoreamos e iteramos contigo después del lanzamiento, para que tu producto crezca y se mantenga a la vanguardia.</div>
       </div>
     </div>
   </div>
@@ -1447,7 +1443,7 @@ select {
           <img src="../assets/team/berny.jpg" width="80" height="80" loading="lazy" style="width:100%;height:100%;object-fit:cover;border-radius:50%;filter:grayscale(100%)" alt="Berny Altamirano">
         </div>
         <div class="team-name">Berny Altamirano</div>
-        <div class="team-role">CEO y Director Comercial</div>
+        <div class="team-role">CEO y Fundador</div>
         <div class="team-bio">Dirige la empresa y cada nueva relación con clientes: entiende tus objetivos y arma el equipo y el plan adecuados para tu proyecto.</div>
         <div class="team-socials">
           <a href="https://www.linkedin.com/in/bernardo-berny-altamirano-9411b5139/" target="_blank" rel="noopener" class="social-btn" aria-label="Berny Altamirano on LinkedIn">in</a>
@@ -1507,12 +1503,12 @@ select {
     <div class="fade-up" style="text-align:center; margin-bottom: 40px;">
       <p class="section-label" style="justify-content:center">Agenda una Reunión</p>
       <h2 class="section-title">¿Listo para <span class='grad-text'>Comenzar?</span></h2>
-      <p class="section-sub" style="margin:0 auto">Elige un horario que te funcione y hablemos de tu proyecto — sin compromiso, solo una conversación.</p>
+      <p class="section-sub" style="margin:0 auto">Elige un horario que te funcione y hablemos de tu proyecto. Sin compromiso, solo una conversación.</p>
     </div>
     <div class="guarantees">
       <div class="guarantee fade-up">
         <svg class="ico"><use href="#i-calendar"/></svg>
-        <div><strong>Llamada de alcance gratis</strong><span>30 minutos para entender tu proyecto. Sin compromiso.</span></div>
+        <div><strong>Una llamada de 30 minutos</strong><span>Conoce al equipo y cuéntanos tu proyecto. Sin compromiso.</span></div>
       </div>
       <div class="guarantee fade-up">
         <svg class="ico"><use href="#i-file"/></svg>
@@ -1600,8 +1596,8 @@ select {
               <select id="budget" name="budget">
                 <option value="">Selecciona un rango...</option>
                 <option value="under-5k">Menos de $5,000 USD</option>
-                <option value="5-15k">$5,000 – $15,000</option>
-                <option value="15-50k">$15,000 – $50,000</option>
+                <option value="5-15k">$5,000 - $15,000</option>
+                <option value="15-50k">$15,000 - $50,000</option>
                 <option value="50k+">Más de $50,000 USD</option>
                 <option value="unsure">Aún no lo sé</option>
               </select>
@@ -1611,8 +1607,8 @@ select {
               <select id="timeline" name="timeline">
                 <option value="">Selecciona...</option>
                 <option value="asap">Lo antes posible</option>
-                <option value="1-3m">En 1–3 meses</option>
-                <option value="3-6m">En 3–6 meses</option>
+                <option value="1-3m">En 1-3 meses</option>
+                <option value="3-6m">En 3-6 meses</option>
                 <option value="exploring">Solo estoy explorando</option>
               </select>
             </div>
@@ -1646,7 +1642,7 @@ select {
     <div class="faq-list">
       <details class="faq-item fade-up">
         <summary>¿Cuánto cuesta un proyecto?</summary>
-        <p>Depende del alcance. Después de una llamada gratuita de 30 minutos te enviamos una propuesta a precio fijo con alcance, tiempos y entregables claros — sin sorpresas.</p>
+        <p>Depende del alcance. Después de una llamada de 30 minutos te enviamos una propuesta a precio fijo con alcance, tiempos y entregables claros, sin sorpresas.</p>
       </details>
       <details class="faq-item fade-up">
         <summary>¿Cuánto tiempo toma?</summary>
@@ -1658,7 +1654,7 @@ select {
       </details>
       <details class="faq-item fade-up">
         <summary>¿Cómo nos comunicamos? ¿Y la zona horaria?</summary>
-        <p>Tenemos presencia en Nueva York y Ciudad de México y trabajamos con clientes en cualquier parte del mundo. Acordamos horarios de reunión que funcionen en tu zona horaria — y si estás en EE.UU. o México, trabajamos en tu mismo horario. Tendrás un project manager dedicado, demos frecuentes del avance y un canal directo con el equipo, en español o inglés.</p>
+        <p>Tenemos presencia en Nueva York y Ciudad de México y trabajamos con clientes en cualquier parte del mundo. Acordamos horarios de reunión que funcionen en tu zona horaria, y si estás en EE.UU. o México, trabajamos en tu mismo horario. Tendrás un project manager dedicado, demos frecuentes del avance y un canal directo con el equipo, en español o inglés.</p>
       </details>
       <details class="faq-item fade-up">
         <summary>¿Qué pasa después del lanzamiento?</summary>
@@ -1666,7 +1662,7 @@ select {
       </details>
       <details class="faq-item fade-up">
         <summary>¿Pueden agregar IA a mi producto actual?</summary>
-        <p>Sí. Integramos IA en productos y herramientas existentes — asistentes, búsqueda inteligente, extracción de datos y automatización — empezando por el caso de uso con mayor retorno.</p>
+        <p>Sí. Integramos IA en productos y herramientas existentes (asistentes, búsqueda inteligente, extracción de datos y automatización), empezando por el caso de uso con mayor retorno.</p>
       </details>
     </div>
   </div>
@@ -1680,7 +1676,7 @@ select {
         <a href="#" class="nav-logo">
           <img src="../assets/envision-logo.png" alt="Envision" class="logo-img" width="433" height="66">
         </a>
-        <p class="footer-tagline">Productos digitales premium para marcas ambiciosas en todo el mundo — desde Ciudad de México y Nueva York.</p>
+        <p class="footer-tagline">Productos digitales premium para marcas ambiciosas en todo el mundo, desde Ciudad de México y Nueva York.</p>
         <p class="footer-tagline" style="margin-top:8px;font-size:0.78rem">Envision XC, S.A. de C.V.</p>
       </div>
       <div class="footer-col">
@@ -1728,7 +1724,7 @@ select {
   <svg width="28" height="28" class="ico"><use href="#i-wa"/></svg>
 </a>
 <div class="sticky-cta" id="stickyCta">
-  <a href="#book" class="btn-primary" data-track="cta_book">Agenda una Llamada Gratis</a>
+  <a href="#book" class="btn-primary" data-track="cta_book">Agenda una Llamada</a>
   <a href="https://wa.me/525532701276?text=Hola%20Envision%2C%20me%20interesa%20iniciar%20un%20proyecto%20con%20ustedes.%20%C2%BFPodemos%20agendar%20una%20llamada%3F" target="_blank" rel="noopener" class="sticky-wa" aria-label="WhatsApp" data-track="click_whatsapp">
     <svg width="22" height="22" class="ico"><use href="#i-wa"/></svg>
   </a>
@@ -1754,7 +1750,7 @@ const T = {
     required: 'Please fill in your name, a valid email and a short description of your project.',
     failed: 'Something went wrong sending your message. Please email us at <a href="mailto:info@matchball.io">info@matchball.io</a> or message us on WhatsApp.',
     mailTitle: 'Almost done!',
-    mailText: 'Your email app should have opened with your message ready — just press send. If it didn\'t, email us at info@matchball.io or message us on WhatsApp.',
+    mailText: 'Your email app should have opened with your message ready. Press send to finish. If it didn\'t, email us at info@matchball.io or message us on WhatsApp.',
     subject: 'New project inquiry',
   },
   es: {
@@ -1763,7 +1759,7 @@ const T = {
     required: 'Por favor escribe tu nombre, un correo válido y una breve descripción de tu proyecto.',
     failed: 'Algo salió mal al enviar tu mensaje. Escríbenos a <a href="mailto:info@matchball.io">info@matchball.io</a> o por WhatsApp.',
     mailTitle: '¡Casi listo!',
-    mailText: 'Tu app de correo debió abrirse con tu mensaje listo — solo presiona enviar. Si no se abrió, escríbenos a info@matchball.io o por WhatsApp.',
+    mailText: 'Tu app de correo debió abrirse con tu mensaje listo. Presiona enviar para terminar. Si no se abrió, escríbenos a info@matchball.io o por WhatsApp.',
     subject: 'Nueva solicitud de proyecto',
   },
 }[LANG];
@@ -1898,7 +1894,7 @@ form.addEventListener('submit', (e) => {
     const body = [
       data.get('message'),
       '',
-      '—',
+      '---',
       'Name: ' + data.get('name'),
       'Email: ' + data.get('email'),
       data.get('company') ? 'Company: ' + data.get('company') : '',
@@ -1907,7 +1903,7 @@ form.addEventListener('submit', (e) => {
       label('timeline') ? 'Start: ' + label('timeline') : '',
     ].filter(Boolean).join('\n');
     window.location.href = 'mailto:' + CONFIG.contactEmail +
-      '?subject=' + encodeURIComponent(T.subject + ' — ' + data.get('name')) +
+      '?subject=' + encodeURIComponent(T.subject + ' - ' + data.get('name')) +
       '&body=' + encodeURIComponent(body);
     track('generate_lead', { method: 'mailto', service: data.get('service'), budget: data.get('budget') });
     showSuccess(T.mailTitle, T.mailText);
